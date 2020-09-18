@@ -1,16 +1,17 @@
-import 'package:flutter_app/posts_model.dart';
 import 'package:flutter/material.dart';
 
-class PostDetail extends StatelessWidget {
-  final Post post;
+import 'models/product.dart';
 
-  PostDetail({@required this.post});
+class ProductDetail extends StatelessWidget {
+  final Product product;
+
+  ProductDetail({@required this.product});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(post.title),
+          title: Text(product.name),
         ),
         body: SingleChildScrollView(
           child: Padding(
@@ -23,19 +24,19 @@ class PostDetail extends StatelessWidget {
                     children: <Widget>[
                       ListTile(
                         title: Text("Title"),
-                        subtitle: Text(post.title),
+                        subtitle: Text(product.name),
                       ),
                       ListTile(
                         title: Text("ID"),
-                        subtitle: Text("${post.id}"),
+                        subtitle: Text("${product.id}"),
                       ),
                       ListTile(
-                        title: Text("Body"),
-                        subtitle: Text(post.body),
+                        title: Text("Price"),
+                        subtitle: Text("${product.price}"),
                       ),
                       ListTile(
-                        title: Text("User ID"),
-                        subtitle: Text("${post.userId}"),
+                        title: Text("Allergen Text"),
+                        subtitle: Text("${product.allergenText}"),
                       ),
                     ],
                   ),

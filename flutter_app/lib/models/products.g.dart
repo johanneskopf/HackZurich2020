@@ -30,14 +30,15 @@ Facets _$FacetsFromJson(Map<String, dynamic> json) {
         ? null
         : PurchasableOnline.fromJson(
             json['purchasable_online'] as Map<String, dynamic>)
-    ..retailer = json['retailer']
+    // ..retailer = json['retailer']
     ..discount = json['discount'] == null
         ? null
         : Discount.fromJson(json['discount'] as Map<String, dynamic>)
     ..label = json['label'] == null
         ? null
         : Label.fromJson(json['label'] as Map<String, dynamic>)
-    ..brand = json['brand'];
+    // ..brand = json['brand']
+    ;
 }
 
 Map<String, dynamic> _$FacetsToJson(Facets instance) => <String, dynamic>{

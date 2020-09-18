@@ -1,25 +1,26 @@
 import 'dart:convert';
-import 'package:flutter_app/posts_model.dart';
 import 'package:http/http.dart';
 
-class HttpService {
-  final String postsURL = "https://jsonplaceholder.typicode.com/posts";
+import 'models/product.dart';
+import 'models/products.dart';
 
-  Future<List<Post>> getPosts() async {
-    Response res = await get(postsURL);
+class HttpService {
+  final String productsURL = "https://hackzurich-api.migros.ch/products?limit=50&offset=0&facet_sort_order=asc&sort=score&order=asc&region=national&view=browse&custom_image=false";
+  final String username = 'hackzurich2020';
+  final String password = 'uhSyJ08KexKn4ZFS';
+
+  Future<List<Product>> getProducts() async {
+    String basicAuth = 'Basic ' + base64Encode(utf8.encode('$username:$password'));
+
+    Response res = await get(productsURL, headers: <String, String>{'authorization': basicAuth});
 
     if (res.statusCode == 200) {
-      List<dynamic> body = jsonDecode(res.body);
+      Map<String, dynamic> body = jsonDecode(res.body);
+      Products products =  Products.fromJson(body);
 
-      List<Post> posts = body
-          .map(
-            (dynamic item) => Post.fromJson(item),
-      )
-          .toList();
-
-      return posts;
+      return products.products;
     } else {
-      throw "Can't get posts.";
+      throw "Can't get products.";
     }
   }
 }

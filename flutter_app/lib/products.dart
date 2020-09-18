@@ -1,32 +1,33 @@
 import 'package:flutter_app/http_service.dart';
-import 'package:flutter_app/posts_detail.dart';
-import 'package:flutter_app/posts_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/product_detail.dart';
 
-class PostsPage extends StatelessWidget {
+import 'models/product.dart';
+
+class ProductsPage extends StatelessWidget {
   final HttpService httpService = HttpService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Posts"),
+        title: Text("Products"),
       ),
       body: FutureBuilder(
-        future: httpService.getPosts(),
-        builder: (BuildContext context, AsyncSnapshot<List<Post>> snapshot) {
+        future: httpService.getProducts(),
+        builder: (BuildContext context, AsyncSnapshot<List<Product>> snapshot) {
           if (snapshot.hasData) {
-            List<Post> posts = snapshot.data;
+            List<Product> products = snapshot.data;
             return ListView(
-              children: posts
+              children: products
                   .map(
-                    (Post post) => ListTile(
-                  title: Text(post.title),
-                  subtitle: Text("${post.userId}"),
+                    (Product product) => ListTile(
+                  title: Text(product.name),
+                  subtitle: Text("${product.id}"),
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => PostDetail(
-                        post: post,
+                      builder: (context) => ProductDetail(
+                        product: product,
                       ),
                     ),
                   ),
