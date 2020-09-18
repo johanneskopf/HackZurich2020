@@ -1,0 +1,14 @@
+{
+  "id": "062",
+  "name": "Frey",
+  "slug": "frey",
+  "links": {
+    "homepage": {
+      "url": "http://www.chocolatfrey.ch/de",
+      "name": "Homepage",
+      "type": "info",
+      "purchasable": false
+    }
+  },
+  "image": "$product_brand_image"
+}

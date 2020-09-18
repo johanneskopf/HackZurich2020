@@ -1,0 +1,61 @@
+{
+  "name": "Erhältlich bei",
+  "terms": [
+    {
+      "term": "supermarkt",
+      "count": 36758,
+      "name": "Supermarkt",
+      "active": false,
+      "slug": "supermarkt"
+    },
+    {
+      "term": "doitgarden",
+      "count": 32059,
+      "name": "Do It + Garden",
+      "active": false,
+      "slug": "doitgarden"
+    },
+    {
+      "term": "sportxx",
+      "count": 28342,
+      "name": "SportXX",
+      "active": false,
+      "slug": "sportxx"
+    },
+    {
+      "term": "melectronics",
+      "count": 26516,
+      "name": "melectronics",
+      "active": false,
+      "slug": "melectronics"
+    },
+    {
+      "term": "micasa",
+      "count": 15475,
+      "name": "Micasa",
+      "active": false,
+      "slug": "micasa"
+    },
+    {
+      "term": "leshop",
+      "count": 7261,
+      "name": "LeShop.ch",
+      "active": false,
+      "slug": "leshop"
+    },
+    {
+      "term": "bikeworld",
+      "count": 3112,
+      "name": "Bike World",
+      "active": false,
+      "slug": "bikeworld"
+    },
+    {
+      "term": "alnatura",
+      "count": 408,
+      "name": "Alnatura Bio Super Märkte",
+      "active": false,
+      "slug": "alnatura"
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "100131400000",
+  "language": "de",
+  "name": "Crémant 47% Zartbitterschokolade",
+  "slug": "cremant-47-zartbitterschokolade-100131400000",
+  "boss_number": "010110040605",
+  "description": {
+    "text": "Dunkle Schokolade. Noir, Milch, Weiss, Blond oder Milch-Nuss - diese klassischen, bestens bekannten und sehr beliebten Schokolade-Tafeln gelten als DIE TRADITIONS-TAFELN im Chocolat Frey Sortiment. Schlicht, traditionell, hochwertig, urspr&uuml;nglich, von h&ouml;chster Qualit&auml;t und dadurch bestens etabliert.",
+    "source": "PIM"
+  },
+  "tags": [
+    "source-pim",
+    "migipedia",
+    "validity-range-not-set",
+    "view-browse-partial",
+    "view-browse-all-retailers-partial"
+  ],
+  "is_variant": false,
+  "gtins": [
+    "7616500013148"
+  ],
+  "brand": "$product_brand",
+  "labels": "$[]product_label",
+  "categories": [
+    {
+      "code": "BeSS_0101082101",
+      "name": "Schokoladentafeln",
+      "slug": "supermarkt/lebensmittel/suessigkeiten/schokolade/schokoladentafeln",
+      "visible": true,
+      "title": "Schokoladentafeln in grosser Auswahl bei der Migros",
+      "parent_code": "BeSS_01010821",
+      "level": 5
+    },
+    {
+      "code": "BeSS_01010821",
+      "name": "Schokolade",
+      "slug": "supermarkt/lebensmittel/suessigkeiten/schokolade",
+      "visible": true,
+      "parent_code": "BeSS_010108",
+      "level": 4
+    },
+    {
+      "code": "BeSS_010108",
+      "name": "Süssigkeiten",
+      "slug": "supermarkt/lebensmittel/suessigkeiten",
+      "visible": true,
+      "title": "Süssigkeiten aus Ihrer Migros: für Naschkatzen und Schleckmäuler",
+      "parent_code": "BeSS_0101",
+      "image": {
+        "original": "https://image.migros.ch/original/a9c80f4e896b5ebdd3b7ebbee11f956c8ff157cf/suessigkeiten.jpg",
+        "stack": "https://image.migros.ch/{stack}/a9c80f4e896b5ebdd3b7ebbee11f956c8ff157cf/suessigkeiten.jpg"
+      },
+      "level": 3
+    },
+    {
+      "code": "BeSS_0101",
+      "name": "Lebensmittel",
+      "slug": "supermarkt/lebensmittel",
+      "visible": true,
+      "title": "Lebensmittel aus Ihrer Migros: hochwertige Produkte, ausgewogener Genuss",
+      "parent_code": "BeSS_01",
+      "image": {
+        "original": "https://image.migros.ch/original/c4c714b236338d5b9a042dd7dd2457b7e8604696/lebensmittel.jpg",
+        "stack": "https://image.migros.ch/{stack}/c4c714b236338d5b9a042dd7dd2457b7e8604696/lebensmittel.jpg"
+      },
+      "level": 2
+    },
+    {
+      "code": "BeSS_01",
+      "name": "Supermarkt",
+      "slug": "supermarkt",
+      "visible": true,
+      "parent_code": "root",
+      "level": 1
+    }
+  ],
+  "additional_categories": [
+    [
+      {
+        "code": "AMIG_CAT_Schokoladentafeln_SchokoladenSuessigkeiten",
+        "name": "Schokoladentafeln",
+        "slug": "amigos/schokoladen-suessigkeiten/schokoladentafeln",
+        "visible": true,
+        "parent_code": "AMIG_CAT_SchokoladenSuessigkeiten",
+        "level": 3
+      },
+      {
+        "code": "AMIG_CAT_SchokoladenSuessigkeiten",
+        "name": "Schokoladen & Süssigkeiten",
+        "slug": "amigos/schokoladen-suessigkeiten",
+        "visible": true,
+        "parent_code": "BeSS_96",
+        "level": 2
+      },
+      {
+        "code": "BeSS_96",
+        "name": "aMigos!",
+        "slug": "amigos",
+        "visible": true,
+        "parent_code": "root",
+        "level": 1
+      }
+    ]
+  ],
+  "features": [
+    {
+      "label_code": "MISO_anzahlentnehmbarereinzelportionen",
+      "label": "Anzahl entnehmbarer Einzeleinheiten",
+      "values": [
+        {
+          "value_code": "NUMERIC_1.0",
+          "value": "1.0",
+          "numeric_value": 1
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_cu_gebindeart",
+      "label": "Verpackungsart",
+      "values": [
+        {
+          "value_code": "MISO_cu_gebindeart_papierverpackung",
+          "value": "Papierverpackung"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_Lebensmittel_Schokolade_Sortiment",
+      "label": "Sortiment",
+      "values": [
+        {
+          "value_code": "MISO_Tafeln",
+          "value": "Tafeln"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_Lebensmittel_Schokolade_Themen",
+      "label": "Themen",
+      "values": [
+        {
+          "value_code": "MISO_DunkleSchokolade",
+          "value": "Dunkle Schokolade"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_artvonbonbonsanderensuesswaren",
+      "label": "Art von Bonbons/anderen Süsswaren",
+      "values": [
+        {
+          "value_code": "MISO_artvonbonbonsanderensuesswaren_schokoladentafel",
+          "value": "Schokoladentafel"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_formdersuesswaren",
+      "label": "Form der Süsswaren",
+      "values": [
+        {
+          "value_code": "MISO_formdersuesswaren_tafel",
+          "value": "Tafel"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_artvonschokolade",
+      "label": "Art von Schokolade",
+      "values": [
+        {
+          "value_code": "MISO_artvonschokolade_dunkleschokolade",
+          "value": "Dunkle Schokolade"
+        }
+      ],
+      "top_fact": false
+    }
+  ],
+  "image": {
+    "original": "https://image.migros.ch/original/e5ad87314064f3374bf307b889d28185512a3db5/cremant-47-zartbitterschokolade.jpg",
+    "stack": "https://image.migros.ch/{stack}/e5ad87314064f3374bf307b889d28185512a3db5/cremant-47-zartbitterschokolade.jpg"
+  },
+  "image_transparent": {
+    "original": "https://image.migros.ch/original/99ab1dcbf4da9485638196e07e0cabe763d65ffc/cremant-47-zartbitterschokolade.png",
+    "stack": "https://image.migros.ch/{stack}/99ab1dcbf4da9485638196e07e0cabe763d65ffc/cremant-47-zartbitterschokolade.png"
+  },
+  "internal_features": [
+    {
+      "label_code": "MISO_aMigos_anzeige",
+      "label": "Anzeige aMigos!",
+      "values": [
+        {
+          "value_code": "MISO_aMigos_anzeige_ja",
+          "value": "Ja"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MISO_aMigos_sortierung",
+      "label": "Sortierung aMigos",
+      "values": [
+        {
+          "value_code": "NUMERIC_690",
+          "value": "690",
+          "numeric_value": 690
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MAPI_PRODUCT_KIND",
+      "values": [
+        {
+          "value_code": "HAWA",
+          "value": "Handelsware"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MAPI_ASSORTMENT_LIST_KIND",
+      "values": [
+        {
+          "value_code": "X",
+          "value": "Auslaufartikel"
+        }
+      ],
+      "top_fact": false
+    },
+    {
+      "label_code": "MAPI_PRODUCT_GROUP",
+      "values": [
+        {
+          "value_code": "11141",
+          "value": "FREY 400G"
+        }
+      ],
+      "top_fact": false
+    }
+  ],
+  "vat": {
+    "id": 2,
+    "percentage": 2.5
+  },
+  "links": "$product_links",
+  "updated_at": "2020-09-13T04:35:43+0200",
+  "receipt_text": "Crémant 47% 400g",
+  "price": {
+    "valid_from": "2018-01-29T00:00:00+0100",
+    "valid_to": "9999-12-31T23:59:59+0100",
+    "currency": "CHF",
+    "source": "PriceRepository",
+    "item": {
+      "price": 4.8,
+      "quantity": 1,
+      "unit": "CU",
+      "varying_quantity": false,
+      "display_quantity": "400g"
+    },
+    "base": {
+      "price": 1.2,
+      "quantity": 100,
+      "unit": "g"
+    }
+  },
+  "retailer": {
+    "id": "supermarkt",
+    "name": "Supermarkt"
+  },
+  "ratings": {
+    "count_all": 8,
+    "average_all": 4.8
+  },
+  "allergen_text": "Kann Milch, Haselnüsse, Mandeln und Spuren anderer Schalenfrüchte (Nüsse) enthalten",
+  "reindex_date": "9999-12-31T00:00:00+0100"
+}

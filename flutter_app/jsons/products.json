@@ -1,0 +1,121 @@
+{
+  "total_hits": 136182,
+  "facets": {
+    "purchasable_online": {
+      "name": "Online erhältlich",
+      "terms": [
+        {
+          "term": "T",
+          "count": 89861,
+          "name": "Ja",
+          "active": false,
+          "slug": "ja"
+        },
+        {
+          "term": "F",
+          "count": 46321,
+          "name": "Nein",
+          "active": false,
+          "slug": "nein"
+        }
+      ]
+    },
+    "retailer": "$facets_retailer",
+    "discount": {
+      "name": "Aktionen & Neuheiten",
+      "terms": [
+        {
+          "term": "aktion",
+          "count": 6441,
+          "name": "Aktion",
+          "active": false,
+          "slug": "aktion"
+        },
+        {
+          "term": "neuheit",
+          "count": 50,
+          "name": "Neuheit",
+          "active": false,
+          "slug": "neuheit"
+        }
+      ]
+    },
+    "label": {
+      "name": "Labels",
+      "terms": [
+        {
+          "term": "L07",
+          "count": 5977,
+          "name": "Eco",
+          "active": false,
+          "slug": "eco"
+        },
+        {
+          "term": "L53",
+          "count": 3614,
+          "name": "Swissness",
+          "active": false,
+          "slug": "swissness"
+        },
+        {
+          "term": "L09",
+          "count": 3232,
+          "name": "FSC",
+          "active": false,
+          "slug": "fsc"
+        },
+        {
+          "term": "L60",
+          "count": 2807,
+          "name": "GOTS",
+          "active": false,
+          "slug": "gots"
+        },
+        {
+          "term": "L17",
+          "count": 1696,
+          "name": "Produit Suisse",
+          "active": false,
+          "slug": "produit-suisse"
+        },
+        {
+          "term": "L28",
+          "count": 1395,
+          "name": "Aus der Region",
+          "active": false,
+          "slug": "aus-der-region"
+        },
+        {
+          "term": "L10",
+          "count": 1213,
+          "name": "Migros Bio Cotton",
+          "active": false,
+          "slug": "migros-bio-cotton"
+        },
+        {
+          "term": "L59",
+          "count": 1042,
+          "name": "MadeInGreen Oekotex",
+          "active": false,
+          "slug": "madeingreen-oekotex"
+        },
+        {
+          "term": "L02",
+          "count": 948,
+          "name": "Migros Bio",
+          "active": false,
+          "slug": "migros-bio"
+        },
+        {
+          "term": "L34",
+          "count": 592,
+          "name": "UTZ",
+          "active": false,
+          "slug": "utz"
+        }
+      ]
+    },
+    "brand": "$facets_brand"
+  },
+  "products": "$[]product"
+}

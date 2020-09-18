@@ -1,0 +1,16 @@
+{
+  "migros_ch": {
+    "url": "https://produkte.migros.ch/products/100131400000",
+    "name": "migros.ch",
+    "canonical": "https://produkte.migros.ch/cremant-47-zartbitterschokolade-100131400000",
+    "type": "info",
+    "purchasable": false
+  },
+  "migipedia": {
+    "url": "https://migipedia.migros.ch/de/products/100131400000",
+    "name": "Migipedia",
+    "canonical": "https://produkte.migros.ch/cremant-47-zartbitterschokolade-100131400000",
+    "type": "info",
+    "purchasable": false
+  }
+}

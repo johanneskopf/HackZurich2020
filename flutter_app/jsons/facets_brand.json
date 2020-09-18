@@ -1,0 +1,75 @@
+{
+    "name": "Marken",
+    "terms": [
+        {
+            "term": "285",
+            "count": 4102,
+            "name": "Ellen Amber",
+            "active": false,
+            "slug": "ellen-amber"
+        },
+        {
+            "term": "NB5",
+            "count": 2452,
+            "name": "John Adams",
+            "active": false,
+            "slug": "john-adams"
+        },
+        {
+            "term": "MK2",
+            "count": 2431,
+            "name": "Lowa",
+            "active": false,
+            "slug": "lowa"
+        },
+        {
+            "term": "M41",
+            "count": 2409,
+            "name": "Do it + Garden",
+            "active": false,
+            "slug": "do-it-garden"
+        },
+        {
+            "term": "281",
+            "count": 2375,
+            "name": "Kids",
+            "active": false,
+            "slug": "kids"
+        },
+        {
+            "term": "MX1",
+            "count": 1980,
+            "name": "Trevolution",
+            "active": false,
+            "slug": "trevolution"
+        },
+        {
+            "term": "N96",
+            "count": 1878,
+            "name": "Keen",
+            "active": false,
+            "slug": "keen"
+        },
+        {
+            "term": "SMI",
+            "count": 1804,
+            "name": "Smile",
+            "active": false,
+            "slug": "smile-SMI"
+        },
+        {
+            "term": "FR1",
+            "count": 1608,
+            "name": "On",
+            "active": false,
+            "slug": "on"
+        },
+        {
+            "term": "NF1",
+            "count": 1560,
+            "name": "Cucina & Tavola",
+            "active": false,
+            "slug": "cucina-tavola"
+        }
+    ]
+}
