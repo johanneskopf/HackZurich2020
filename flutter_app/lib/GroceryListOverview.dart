@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/GroceryList.dart';
 import 'Globals.dart';
@@ -27,11 +28,12 @@ class _GroveryListOverview extends State<GroceryListOverviewPage> {
         title: const Text('Grocery Lists'),
       ),
       body: Container(
+        margin: EdgeInsets.only(top: 10),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          child: ListView.builder(
-            padding: const EdgeInsets.all(8),
+          child: ListView.separated(
             itemCount: list.length,
+            separatorBuilder: (BuildContext context, int index) => Divider(),
             itemBuilder: (BuildContext context, int index) {
               return GroceryListButton(
                 groceryListID: index,
@@ -41,6 +43,7 @@ class _GroveryListOverview extends State<GroceryListOverviewPage> {
           )),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Theme.of(context).primaryColor,
           onPressed: () async {
             bool result = await Navigator.push(
               context,
@@ -67,22 +70,72 @@ class GroceryListButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: RaisedButton(
-          onPressed: () async {
+    return Dismissible(
+        key: UniqueKey(),
+        direction: DismissDirection.horizontal,
+        // We also need to provide a function that tells our app what to do
+        // after an item has been swiped away.
+        onDismissed: (DismissDirection dir) async {
+          if (dir == DismissDirection.startToEnd) {
+            GroceryLists.removeAt(groceryListID);
+          } else {
             bool result = await Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) =>
-                      GroceryListPage(groceryListID, false)),
+                  builder: (context) => GroceryListPage(groceryListID, false)),
+            );
+          }
+          parent.setState(() {
+            parent.list.clear();
+            parent.list.addAll(GroceryLists);
+          });
+        },
+        // Show a red background as the item is swiped away
+        background: Container(
+          color: Colors.red,
+          child: Icon(Icons.delete),
+          alignment: Alignment.centerLeft,
+        ),
+        // Background when swipping from right to left
+        secondaryBackground: Container(
+          color: Colors.green,
+          child: Icon(Icons.edit),
+          alignment: Alignment.centerRight,
+        ),
+        child:
+        ButtonTheme(
+          minWidth: MediaQuery.of(context).size.width,
+          height: 75.0,
+          child:
+        RaisedButton(
+          color: Theme.of(context).accentColor,
+          onPressed: () async {
+            await Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => GroceryListPage(groceryListID, false)),
             );
             parent.setState(() {
               parent.list.clear();
               parent.list.addAll(GroceryLists);
             });
           },
-          child: Text(GroceryLists[groceryListID].listName),
-        ));
+          child:
+          Row(
+            children: <Widget>[
+          Icon(Icons.shopping_cart, color: Colors.white, size: 40,
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 20),
+                child:
+              Text(GroceryLists[groceryListID].listName,
+
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white
+                ),)),
+            ],
+          )
+        )));
   }
 }

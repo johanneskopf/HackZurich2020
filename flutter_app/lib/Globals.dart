@@ -1,28 +1,14 @@
 import 'dart:core';
 
-import 'package:flutter/cupertino.dart';
-
-int i = 0;
-
 class GroceryItem {
   String name;
   bool done = false;
-  var key = Key("default");
-  int idx = i;
 
   GroceryItem(this.name) {
-    this.idx = i;
-    i++;
-    Refresh();
   }
 
   void SetDone(bool isDone){
     done = isDone;
-    Refresh();
-  }
-
-  void Refresh() {
-    key = Key("${idx}_$done");
   }
 }
 
@@ -41,6 +27,7 @@ class GroceryList {
       newItem.SetDone(element.done);
       items.add(newItem);});
   }
+
 }
 
 var GroceryLists = <GroceryList>[];

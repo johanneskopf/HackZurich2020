@@ -111,8 +111,9 @@ class _GroceryListWidgetState extends State<GroceryListPage> {
                             workingList.items
                                 .add(GroceryItem(itemController.text));
                           });
+                          itemController.text = "";
                         },
-                        child: Center(child: Icon(Icons.add))),
+                        child: Center(child: Icon(Icons.add, color: Colors.white))),
                   )),
                 ])),
             Container(
@@ -125,7 +126,7 @@ class _GroceryListWidgetState extends State<GroceryListPage> {
 
                     final String item = workingList.items[index].name;
                     return Dismissible(
-                      key: workingList.items[index].key,
+                      key: UniqueKey(),
                       direction: workingList.items[index].done
                           ? DismissDirection.startToEnd
                           : DismissDirection.horizontal,
