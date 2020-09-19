@@ -35,45 +35,6 @@ class _FavoriteRecipesWidgetState extends State<FavoriteRecipesPage> {
   }
 }
 
-//
-// class FavoriteRecipesPage extends StatefulWidget {
-//   @override
-//   _FavoriteRecipesWidgetState createState() => _FavoriteRecipesWidgetState();
-// }
-//
-// class _FavoriteRecipesWidgetState extends State<FavoriteRecipesPage> {
-//
-//   _listListener() {
-//     setState(() {});
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       // appBar: AppBar(
-//       //   title: Container(
-//       //     child: Center(
-//       //       child: Text(
-//       //         'Favorite Recipes',
-//       //       ),
-//       //     ),
-//       //   ),
-//       // ),
-//       body: SingleChildScrollView(
-//           child: Container(
-//               margin: EdgeInsets.only(top: 24),
-//               child: ListView.builder(
-//                 padding: const EdgeInsets.all(8),
-//                 itemCount: FavoriteRecipes.length,
-//                 itemBuilder: (BuildContext context, int index) {
-//                   return Text(index.toString());
-//                   // return RecipeButton(info: FavoriteRecipes[index]);
-//                 },
-//               ))),
-//     );
-//   }
-// }
-//
 class RecipeButton extends StatelessWidget {
   final Recipe info;
 
@@ -119,16 +80,36 @@ class RecipeButton extends StatelessWidget {
               Expanded(
                   flex: 2,
                   child: GestureDetector(
-                        onTap: () {
-                          print("remove from fav's");
-                        },
-                        child:
-                              Icon(
-                                  Icons.delete,
-                                  color: Theme.of(context).primaryColor
-                              )
-                            ,
-                      ))
+                    onTap: () {
+                      print("remove from fav's");
+                    },
+                    child: Icon(Icons.delete,
+                        color: Theme.of(context).primaryColor),
+                  ))
             ])));
+  }
+
+  void showAlertDialog(BuildContext context, Recipe recipe) {
+    showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext) {
+          return AlertDialog(
+              title: Text("Remove from Favorites?"),
+              content: Text("Do you really want to remove ${recipe.title}?"),
+              actions: <Widget>[
+                RaisedButton(
+                    onPressed: () {
+                      FavoriteRecipes.remove(recipe);
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('Remove')),
+                RaisedButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text('Cancel'))
+              ]);
+        });
   }
 }
