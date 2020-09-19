@@ -11,6 +11,7 @@ class RecipeSizeIngredientBlockIngredient {
   @JsonKey(name: 'is_main_ingredient') bool isMainIngredient;
   String text;
   String amount;
+  double quantity;
   dynamic availability;
   String cultivar;
 
