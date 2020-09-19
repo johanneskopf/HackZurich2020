@@ -1,15 +1,25 @@
 import 'dart:core';
+import 'package:flutter_app/models/index.dart';
+
 import 'models/recipe.dart';
 
 class GroceryItem {
   String name;
   bool done = false;
+  bool bought = false;
+  Product product = null;
 
   GroceryItem(this.name) {
   }
 
   void SetDone(bool isDone){
     done = isDone;
+  }
+
+  void BoughtProduct(Product p){
+    bought = true;
+    product = p;
+    name = product.name; // update title of list item
   }
 }
 

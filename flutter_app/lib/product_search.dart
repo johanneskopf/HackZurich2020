@@ -58,21 +58,30 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
                             ),
                             Container(
                               alignment: Alignment.bottomCenter,
-                              child: DecoratedBox(
-                                decoration: BoxDecoration(
-                                    color: Color.fromRGBO(0, 0, 0, 0.4),
-                                    borderRadius: BorderRadius.all(
-                                        const Radius.circular(10.0))),
-                                child: Container(
-                                  padding: EdgeInsets.all(10.0),
-                                  child: Text(
-                                    '${product.name}',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18.0),
+                              child: InkWell(
+                                child: DecoratedBox(
+                                  decoration: BoxDecoration(
+                                      color: Color.fromRGBO(0, 0, 0, 0.4),
+                                      borderRadius: BorderRadius.all(
+                                          const Radius.circular(10.0))),
+                                  child: Container(
+                                    padding: EdgeInsets.all(10.0),
+                                    child: Text(
+                                      '${product.name}',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18.0),
+                                    ),
                                   ),
                                 ),
+                                onTap: () {
+                                  GroceryLists[groceryListId]
+                                      .items[groceryListItemId]
+                                      .BoughtProduct(product);
+                                  // setState(() {});
+                                  Navigator.pop(context);
+                                },
                               ),
                             ),
                           ],
