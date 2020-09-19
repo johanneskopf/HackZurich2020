@@ -30,15 +30,12 @@ Facets _$FacetsFromJson(Map<String, dynamic> json) {
         ? null
         : PurchasableOnline.fromJson(
             json['purchasable_online'] as Map<String, dynamic>)
-    // ..retailer = json['retailer']
-    ..discount = json['discount'] == null
-        ? null
-        : Discount.fromJson(json['discount'] as Map<String, dynamic>)
+    ..retailer = json['retailer']
+    ..discount = json['discount']
     ..label = json['label'] == null
         ? null
         : Label.fromJson(json['label'] as Map<String, dynamic>)
-    // ..brand = json['brand']
-    ;
+    ..brand = json['brand'];
 }
 
 Map<String, dynamic> _$FacetsToJson(Facets instance) => <String, dynamic>{
@@ -57,17 +54,6 @@ PurchasableOnline _$PurchasableOnlineFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$PurchasableOnlineToJson(PurchasableOnline instance) =>
     <String, dynamic>{
-      'name': instance.name,
-      'terms': instance.terms,
-    };
-
-Discount _$DiscountFromJson(Map<String, dynamic> json) {
-  return Discount()
-    ..name = json['name'] as String
-    ..terms = json['terms'] as List;
-}
-
-Map<String, dynamic> _$DiscountToJson(Discount instance) => <String, dynamic>{
       'name': instance.name,
       'terms': instance.terms,
     };

@@ -1,3 +1,4 @@
+import 'package:flutter_app/models/products_discount.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'facets_brand.dart';
 import 'facets_retailer.dart';
@@ -23,7 +24,7 @@ class Facets {
 
   @JsonKey(name: 'purchasable_online') PurchasableOnline purchasableOnline;
   FacetsRetailer retailer;
-  Discount discount;
+  ProductsDiscount discount;
   Label label;
   FacetsBrand brand;
 
@@ -40,17 +41,6 @@ class PurchasableOnline {
 
   factory PurchasableOnline.fromJson(Map<String,dynamic> json) => _$PurchasableOnlineFromJson(json);
   Map<String, dynamic> toJson() => _$PurchasableOnlineToJson(this);
-}
-
-@JsonSerializable()
-class Discount {
-      Discount();
-
-  String name;
-  List<dynamic> terms;
-
-  factory Discount.fromJson(Map<String,dynamic> json) => _$DiscountFromJson(json);
-  Map<String, dynamic> toJson() => _$DiscountToJson(this);
 }
 
 @JsonSerializable()

@@ -1,0 +1,195 @@
+{
+  "retailer": "$discount_retailer",
+  "categories": [
+    {
+      "code": "string",
+      "name": "string",
+      "slug": "string",
+      "slugs": {
+        "de": "string",
+        "fr": "string",
+        "it": "string"
+      },
+      "title": "string",
+      "abstract": "string",
+      "keywords": [
+        "string"
+      ],
+      "headline": "string",
+      "parent_code": "string",
+      "image": {
+        "source": "string",
+        "code": "string",
+        "description": "string",
+        "original": "string",
+        "custom": "string",
+        "small": "string",
+        "medium": "string",
+        "large": "string",
+        "hash": "string",
+        "tags": [
+          "string"
+        ],
+        "stack": "string"
+      },
+      "level": 0,
+      "visible": true
+    }
+  ],
+  "discount_events": [
+    {
+      "discount_id": "string",
+      "campaign_ids": [
+        "string"
+      ],
+      "event_id": "string",
+      "advertising_material_type_id": "string",
+      "advertising_material_id": "string",
+      "product_ids": [
+        "string"
+      ],
+      "start_date": "2020-09-19T09:01:20.226Z",
+      "end_date": "2020-09-19T09:01:20.226Z",
+      "publication_date": "2020-09-19T09:01:20.226Z"
+    }
+  ],
+  "id": "string",
+  "cms_id": "string",
+  "channel": "string",
+  "region": "string",
+  "year": 0,
+  "start_date": "2020-09-19T09:01:20.226Z",
+  "end_date": "2020-09-19T09:01:20.226Z",
+  "calendar_week": "string",
+  "duration": "string",
+  "duration_days": 0,
+  "discount_type": "string",
+  "location_planning_type": "string",
+  "discount_type_id": "string",
+  "reduction_type_id": "string",
+  "discount_type_label": "string",
+  "special_advertisement": true,
+  "advertisement_type_id": "string",
+  "discount_regions": [
+    "string"
+  ],
+  "reference_product_id": "string",
+  "organisation": "string",
+  "cooperative": "string",
+  "description": "string",
+  "discount_hint": "string",
+  "fantastic_price": true,
+  "high_performer": true,
+  "collective_discount": true,
+  "selling_unit": "string",
+  "discount_amount": "string",
+  "savings": "string",
+  "instead_of": "string",
+  "price": 0,
+  "original_price": 0,
+  "profit": 0,
+  "disclaimer": "string",
+  "image": "$discount_image",
+  "image_transparent": "$discount_image_transparent",
+  "secondary_image": {
+    "source": "string",
+    "code": "string",
+    "description": "string",
+    "original": "string",
+    "custom": "string",
+    "small": "string",
+    "medium": "string",
+    "large": "string",
+    "hash": "string",
+    "tags": [
+      "string"
+    ],
+    "stack": "string"
+  },
+  "additional_images": [
+    {
+      "source": "string",
+      "code": "string",
+      "description": "string",
+      "original": "string",
+      "custom": "string",
+      "small": "string",
+      "medium": "string",
+      "large": "string",
+      "hash": "string",
+      "tags": [
+        "string"
+      ],
+      "stack": "string"
+    }
+  ],
+  "logo": {
+    "source": "string",
+    "code": "string",
+    "description": "string",
+    "original": "string",
+    "custom": "string",
+    "small": "string",
+    "medium": "string",
+    "large": "string",
+    "hash": "string",
+    "tags": [
+      "string"
+    ],
+    "stack": "string"
+  },
+  "secondary_logo": {
+    "source": "string",
+    "code": "string",
+    "description": "string",
+    "original": "string",
+    "custom": "string",
+    "small": "string",
+    "medium": "string",
+    "large": "string",
+    "hash": "string",
+    "tags": [
+      "string"
+    ],
+    "stack": "string"
+  },
+  "newsletter_image": "string",
+  "badge": {
+    "original": "string",
+    "stack": "string",
+    "custom": "string",
+    "hdpi_detail": "string",
+    "hdpi_list": "string",
+    "hdpi_slider": "string",
+    "ios_detail": "string",
+    "ios_list": "string",
+    "ios_slider": "string",
+    "ios2x_detail": "string",
+    "ios2x_list": "string",
+    "ios2x_slider": "string",
+    "mdpi_detail": "string",
+    "mdpi_list": "string",
+    "mdpi_slider": "string",
+    "xhdpi_detail": "string",
+    "xhdpi_list": "string",
+    "xhdpi_slider": "string",
+    "xxhdpi_detail": "string",
+    "xxhdpi_list": "string",
+    "xxhdpi_slider": "string",
+    "ios_slider2x": "string"
+  },
+  "source": "string",
+  "boss_number": "string",
+  "publication_date": "2020-09-19T09:01:20.227Z",
+  "discount_role_id": "string",
+  "discount_role_label": "string",
+  "visibility": "string",
+  "last_imported": "2020-09-19T09:01:20.227Z",
+  "last_mapped": "2020-09-19T09:01:20.227Z",
+  "campaign_ids": [
+    "string"
+  ],
+  "tags": [
+    "string"
+  ]
+}

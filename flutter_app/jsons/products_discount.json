@@ -1,0 +1,19 @@
+{
+  "name": "Aktionen & Neuheiten",
+  "terms": [
+    {
+      "term": "aktion",
+      "count": 6441,
+      "name": "Aktion",
+      "active": false,
+      "slug": "aktion"
+    },
+    {
+      "term": "neuheit",
+      "count": 50,
+      "name": "Neuheit",
+      "active": false,
+      "slug": "neuheit"
+    }
+  ]
+}

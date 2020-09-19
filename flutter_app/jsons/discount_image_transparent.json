@@ -1,0 +1,15 @@
+{
+  "source": "string",
+  "code": "string",
+  "description": "string",
+  "original": "string",
+  "custom": "string",
+  "small": "string",
+  "medium": "string",
+  "large": "string",
+  "hash": "string",
+  "tags": [
+    "string"
+  ],
+  "stack": "string"
+}

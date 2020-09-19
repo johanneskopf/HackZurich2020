@@ -1,0 +1,8 @@
+{
+  "discounts": "$[]discount",
+  "facets": "$discounts_facets",
+  "total_hits": 0,
+  "ids": [
+    "string"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "additionalProp1": {
+    "name": "string",
+    "terms": [
+      {
+        "term": "string",
+        "count": 0,
+        "name": "string",
+        "filtered_count": 0,
+        "active": true,
+        "slug": "string",
+        "toggle": "string"
+      }
+    ]
+  },
+  "additionalProp2": {
+    "name": "string",
+    "terms": [
+      {
+        "term": "string",
+        "count": 0,
+        "name": "string",
+        "filtered_count": 0,
+        "active": true,
+        "slug": "string",
+        "toggle": "string"
+      }
+    ]
+  },
+  "additionalProp3": {
+    "name": "string",
+    "terms": [
+      {
+        "term": "string",
+        "count": 0,
+        "name": "string",
+        "filtered_count": 0,
+        "active": true,
+        "slug": "string",
+        "toggle": "string"
+      }
+    ]
+  }
+}
