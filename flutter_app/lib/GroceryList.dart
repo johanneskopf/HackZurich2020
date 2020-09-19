@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/product_search.dart';
 import 'Globals.dart';
 
 class GroceryListPage extends StatefulWidget {
@@ -192,6 +193,10 @@ class GroceryItemWidget extends StatelessWidget {
         title: FlatButton(
             onPressed: () {
               print("clicked item");
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProductSearchPage()),
+              );
             },
             child: Row(children: <Widget>[
               Expanded(

@@ -28,14 +28,19 @@ Facets _$FacetsFromJson(Map<String, dynamic> json) {
   return Facets()
     ..purchasableOnline = json['purchasable_online'] == null
         ? null
-        : PurchasableOnline.fromJson(
-            json['purchasable_online'] as Map<String, dynamic>)
-    // ..retailer = json['retailer']
-    ..discount = json['discount']
+        : PurchasableOnline.fromJson(json['purchasable_online'] as Map<String, dynamic>)
+    ..retailer = json['retailer'] == null
+        ? null
+        : FacetsRetailer.fromJson(json['retailer'] as Map<String, dynamic>)
+    ..discount = json['discount'] == null
+        ? null
+        : ProductsDiscount.fromJson(json['discount'] as Map<String, dynamic>)
     ..label = json['label'] == null
         ? null
         : Label.fromJson(json['label'] as Map<String, dynamic>)
-    // ..brand = json['brand']
+    ..brand = json['brand'] == null
+        ? null
+        : FacetsBrand.fromJson(json['brand'] as Map<String, dynamic>)
   ;
 }
 
