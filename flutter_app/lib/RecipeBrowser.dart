@@ -7,7 +7,6 @@ import 'models/recipe.dart';
 
 import 'package:flutter/services.dart';
 
-
 class DetailPage extends StatefulWidget {
   final recipe;
   var currentPage = 0;
@@ -21,6 +20,7 @@ class DetailPage extends StatefulWidget {
 class _DetailPageState extends State<DetailPage> {
   final double expandedHeight = 400;
   final double roundedContainerHeight = 50;
+  int currentStep = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,14 +28,13 @@ class _DetailPageState extends State<DetailPage> {
       body: Stack(
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only( bottom:50 ),
-            child:
-          CustomScrollView(
-            slivers: <Widget>[
-              buildSliverHead(),
-              SliverToBoxAdapter(child: buildDetail()),
-            ],
-          ),
+            padding: EdgeInsets.only(bottom: 50),
+            child: CustomScrollView(
+              slivers: <Widget>[
+                buildSliverHead(),
+                SliverToBoxAdapter(child: buildDetail()),
+              ],
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -73,7 +72,6 @@ class _DetailPageState extends State<DetailPage> {
               ),
             ),
           ),
-
           Positioned(
             bottom: 0,
             left: 0,
@@ -81,24 +79,26 @@ class _DetailPageState extends State<DetailPage> {
                 width: MediaQuery.of(context).size.width,
                 height: 50,
                 color: Theme.of(context).accentColor,
-                child:
-                Row(
+                child: Row(
                   children: <Widget>[
-                    Expanded(child: FlatButton(
+                    Expanded(
+                        child: FlatButton(
                       child: Text("Info"),
                       onPressed: () {
                         widget.currentPage = 0;
                         setState(() {});
                       },
                     )),
-                    Expanded(child: FlatButton(
+                    Expanded(
+                        child: FlatButton(
                       child: Text("Incredients"),
                       onPressed: () {
                         widget.currentPage = 1;
                         setState(() {});
                       },
                     )),
-                    Expanded(child: FlatButton(
+                    Expanded(
+                        child: FlatButton(
                       child: Text("Steps"),
                       onPressed: () {
                         widget.currentPage = 2;
@@ -106,8 +106,7 @@ class _DetailPageState extends State<DetailPage> {
                       },
                     ))
                   ],
-                )
-            ),
+                )),
           ),
         ],
       ),
@@ -116,30 +115,72 @@ class _DetailPageState extends State<DetailPage> {
 
   Widget buildSliverHead() {
     return SliverPersistentHeader(
-      delegate: DetailSliverDelegate(
-        expandedHeight,
-        roundedContainerHeight,
-        widget.recipe,
-        widget.currentPage
-      ),
+      delegate: DetailSliverDelegate(expandedHeight, roundedContainerHeight,
+          widget.recipe, widget.currentPage),
     );
   }
 
   Widget getBasicText() {
-    return Text(widget.recipe.teasertext,
-        style: TextStyle(
-        color: Colors.black26,
-        height: 1.4,
-        fontSize: 16,
-    ));
-  }
-  Widget getSteps() {
-    return Text("step " * 100,
+    return Text(widget.recipe.teasertext * 20,
         style: TextStyle(
           color: Colors.black26,
           height: 1.4,
           fontSize: 16,
         ));
+  }
+
+  Widget getSteps() {
+    return
+      Container(child:
+      Stepper(
+          physics: ClampingScrollPhysics(),
+        controlsBuilder: (BuildContext context,
+            {VoidCallback onStepContinue, VoidCallback onStepCancel}) =>
+            Container(),
+        onStepTapped: (index) {
+          setState(() {
+              currentStep = index;
+          });
+        },
+          currentStep: currentStep,
+          onStepContinue: () {
+            if (currentStep >= 4) return; //widget.recipe.steps.length) return;
+            setState(() {
+              currentStep += 1;
+            });
+          },
+          onStepCancel: () {
+            if (currentStep <= 0) return;
+            setState(() {
+              currentStep -= 1;
+            });
+          },
+          steps:
+          <Step>[
+            Step(
+              title: Text('Step 1'),
+              content: Text('aaaa' * 100)
+            ),
+            Step(
+              title: Text('Step 2'),
+                content: Text('aaaa' * 100)
+            ),
+            Step(
+              title: Text('Step 3'),
+              content: Text("asdf" * 10),
+            ),
+            Step(
+              title: Text('Step 4'),
+                content: Text('aaaa' * 100)
+            ),
+            Step(
+              title: Text('Step 5'),
+                content: Text('aaaa' * 100)
+            ),
+          ],
+        )
+      )
+      ;
   }
 
   Widget buildDetail() {
@@ -150,14 +191,11 @@ class _DetailPageState extends State<DetailPage> {
         children: <Widget>[
           buildUserInfo(),
           Padding(
-            padding: EdgeInsets.symmetric(
-              vertical: 15,
-              horizontal: 15,
-            ),
-            child:
-              widget.currentPage == 0? getBasicText() : getSteps()
-
-          ),
+              padding: EdgeInsets.symmetric(
+                vertical: 15,
+                horizontal: 15,
+              ),
+              child: widget.currentPage == 0 ? getBasicText() : getSteps()),
         ],
       ),
     );
@@ -168,9 +206,8 @@ class _DetailPageState extends State<DetailPage> {
       leading: CircleAvatar(
         backgroundColor: Colors.blue,
         radius: 24,
-        backgroundImage:
-            NetworkImage(widget.recipe.images.first.ratios[0].stack
-              .replaceFirst("{stack}", "medium")),
+        backgroundImage: NetworkImage(widget.recipe.images.first.ratios[0].stack
+            .replaceFirst("{stack}", "medium")),
       ),
       title: Text(widget.recipe.title),
       subtitle: Text("widget.recipe.tags"),
@@ -185,8 +222,8 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   final recipe;
   int pageIdx;
 
-  DetailSliverDelegate(
-      this.expandedHeight, this.roundedContainerHeight, this.recipe, this.pageIdx);
+  DetailSliverDelegate(this.expandedHeight, this.roundedContainerHeight,
+      this.recipe, this.pageIdx);
 
   @override
   Widget build(
@@ -202,15 +239,14 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
         child: Stack(
           children: <Widget>[
             Container(
-              color: Colors.blue,
-        height: expandedHeight,
-        child:
-            Image.network(
-              recipe.images.first.ratios[4].stack
-                  .replaceFirst("{stack}", "large"),
-              width: MediaQuery.of(context).size.width,
-              fit: BoxFit.cover,
-            )),
+                color: Colors.blue,
+                height: expandedHeight,
+                child: Image.network(
+                  recipe.images.first.ratios[4].stack
+                      .replaceFirst("{stack}", "large"),
+                  width: MediaQuery.of(context).size.width,
+                  fit: BoxFit.cover,
+                )),
             Positioned(
               top: expandedHeight - roundedContainerHeight - shrinkOffset,
               left: 0,
@@ -371,8 +407,7 @@ class _RecipeBrowserWidgetState extends State<RecipeBrowserPage> {
                                       )),
                                   Expanded(
                                       flex: 2,
-                                      child:
-                                      Center(
+                                      child: Center(
                                           child: Text(
                                         recipe.title.toString(),
                                         style: TextStyle(fontSize: 20),
