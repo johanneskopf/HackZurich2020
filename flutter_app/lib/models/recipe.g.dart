@@ -52,7 +52,10 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
     ..created = json['created'] as String
     ..modified = json['modified'] as String
     ..published = json['published'] as String
-    ..sizes = json['sizes'] as List
+    ..sizes = (json['sizes'] as List)
+        ?.map((e) =>
+            e == null ? null : RecipeSize.fromJson(e as Map<String, dynamic>))
+        ?.toList()
     ..availableSizes = json['available_sizes'] as List
     ..relatedRecipes = json['related_recipes'] as List
     ..allSeasons = json['all_seasons'] as bool

@@ -4,6 +4,7 @@ import 'recipe_step.dart';
 import 'recipe_ingredient.dart';
 import 'tag.dart';
 import 'recipe_images.dart';
+import 'recipe_size.dart';
 
 part 'recipe.g.dart';
 
@@ -39,7 +40,7 @@ class Recipe {
   String created;
   String modified;
   String published;
-  List<dynamic> sizes;
+  List<RecipeSize> sizes;
   @JsonKey(name: 'available_sizes') List<dynamic> availableSizes;
   @JsonKey(name: 'related_recipes') List<dynamic> relatedRecipes;
   @JsonKey(name: 'all_seasons') bool allSeasons;
