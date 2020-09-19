@@ -1,0 +1,9 @@
+{
+  "text": "2 Personen",
+  "text_full": "FÃ¼r 2 Personen",
+  "unit": "Personen",
+  "unit_singular": "Person",
+  "quantity": 2,
+  "base_unit": [],
+  "ingredient_blocks": "$[]recipe_size_ingredient_block"
+}

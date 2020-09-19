@@ -21,5 +21,8 @@ export 'recipe_canonical_logo.dart';
 export 'recipe_images.dart';
 export 'recipe_images_ratio.dart';
 export 'recipe_ingredient.dart';
+export 'recipe_size.dart';
+export 'recipe_size_ingredient_block.dart';
+export 'recipe_size_ingredient_block_ingredient.dart';
 export 'recipe_step.dart';
 export 'tag.dart';
