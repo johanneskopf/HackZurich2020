@@ -17,10 +17,10 @@ class HttpService {
   Future<List<Product>> getProducts() async {
     String basicAuth = 'Basic ' + base64Encode(utf8.encode('$username:$password'));
 
-    Response res = await get(productsURL, headers: <String, String>{'authorization': basicAuth});
+    Response res = await get(productsURL, headers: <String, String>{'authorization': basicAuth, 'Content-Type': 'application/json'});
 
     if (res.statusCode == 200) {
-      Map<String, dynamic> body = jsonDecode(res.body);
+      Map<String, dynamic> body = jsonDecode(utf8.decode(res.bodyBytes));
       Products products = Products.fromJson(body);
 
       return products.products;
@@ -34,13 +34,13 @@ class HttpService {
 
     int seed = DateTime.now().millisecondsSinceEpoch; // 1477072619038;
     Response res = await post(recipe_search_URL,
-        headers: <String, String>{'authorization': basicAuth, 'Content-Type': 'application/json; charset=UTF-8'},
+        headers: <String, String>{'authorization': basicAuth, 'Content-Type': 'application/json'},
         body: '{ "size": 1,"query": {"function_score": {"functions": [{"random_score": {"seed": "' + seed.toString() + '"}}]}}}'
       // json.encode( { size:)
     );
 
     if (res.statusCode == 200) {
-      Map<String, dynamic> body = jsonDecode(res.body);
+      Map<String, dynamic> body = jsonDecode(utf8.decode(res.bodyBytes));  // res.body);
       RecipesRandom recipesRandom = RecipesRandom.fromJson(body);
 
       return recipesRandom.hits.hits.first.source;
@@ -53,11 +53,11 @@ class HttpService {
     String basicAuth = 'Basic ' + base64Encode(utf8.encode('$username:$password'));
 
     Response res = await get(product_search_URL.replaceFirst("{query}", query).replaceFirst("{limit}", limit.toString()),
-        headers: <String, String>{'authorization': basicAuth, 'Content-Type': 'application/json; charset=UTF-8'}
+        headers: <String, String>{'authorization': basicAuth, 'Content-Type': 'application/json'}
     );
 
     if (res.statusCode == 200) {
-      Map<String, dynamic> body = jsonDecode(res.body);
+      Map<String, dynamic> body = jsonDecode(utf8.decode(res.bodyBytes));
       Products products = Products.fromJson(body);
 
       return products.products;
