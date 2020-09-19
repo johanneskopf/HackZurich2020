@@ -171,7 +171,7 @@ class _GroceryListWidgetState extends State<GroceryListPage> {
                         child: Icon(Icons.done),
                         alignment: Alignment.centerRight,
                       ),
-                      child: GroceryItemWidget(this.workingList.items[index], index, this),
+                      child: GroceryItemWidget(this.workingList.items[index], index, groceryListId, this),
                     );
                   },
                 )),
@@ -182,10 +182,11 @@ class _GroceryListWidgetState extends State<GroceryListPage> {
 
 class GroceryItemWidget extends StatelessWidget {
   final GroceryItem info;
-  final int idx;
+  final int itemIdx;
+  final int listIdx;
   final _GroceryListWidgetState parent;
 
-  const GroceryItemWidget(this.info, this.idx, this.parent);
+  const GroceryItemWidget(this.info, this.itemIdx, this.listIdx, this.parent);
 
   @override
   Widget build(BuildContext context) {
@@ -195,7 +196,7 @@ class GroceryItemWidget extends StatelessWidget {
               print("clicked item");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProductSearchPage()),
+                MaterialPageRoute(builder: (context) => ProductSearchPage(listIdx, itemIdx)),
               );
             },
             child: Row(children: <Widget>[
@@ -204,7 +205,7 @@ class GroceryItemWidget extends StatelessWidget {
                   FlatButton(
                       onPressed: () {
                         parent.setState(() {
-                          parent.workingList.items[idx].SetDone(info.done? false : true);
+                          parent.workingList.items[itemIdx].SetDone(info.done? false : true);
                         });
                         print("item checked");
                       },

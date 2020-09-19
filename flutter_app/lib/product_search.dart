@@ -1,10 +1,25 @@
 import 'package:flutter_app/http_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/product_detail.dart';
-
+import 'Globals.dart';
 import 'models/product.dart';
 
-class ProductSearchPage extends StatelessWidget {
+class ProductSearchPage extends StatefulWidget {
+  final int groceryListId;
+  final int groceryListItemId;
+
+  ProductSearchPage(this.groceryListId, this.groceryListItemId);
+
+  @override
+  _ProductSearchWidgetState createState() =>
+      _ProductSearchWidgetState(groceryListId, groceryListItemId);
+}
+
+class _ProductSearchWidgetState extends State<ProductSearchPage> {
+  final int groceryListId;
+  final int groceryListItemId;
+  _ProductSearchWidgetState(this.groceryListId, this.groceryListItemId);
+
   final HttpService httpService = HttpService();
 
   @override
@@ -14,7 +29,7 @@ class ProductSearchPage extends StatelessWidget {
         title: Text("Products"),
       ),
       body: FutureBuilder(
-        future: httpService.getProductsByName("Milch"),
+        future: httpService.getProductsByName(GroceryLists[groceryListId].items[groceryListItemId].name),
         builder: (BuildContext context, AsyncSnapshot<List<Product>> snapshot) {
           if (snapshot.hasData) {
             List<Product> products = snapshot.data;
