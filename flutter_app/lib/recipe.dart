@@ -43,8 +43,12 @@ class RecipePage extends StatelessWidget {
                     title: Text("Rating"),
                     subtitle: Text("${recipe.rating.rounded == null ? "No rating" : recipe.rating.rounded}"),
                   ),
-                  // Image.network(recipe.images.first.),
-                  Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
+                  // ListTile(
+                  //   title: Text("Image"),
+                  //   subtitle: Text("${recipe.images.first.ratios.first.stack.replaceFirst("{stack}", "large")}"),
+                  // ),
+                  Image.network(recipe.images.first.ratios.first.stack.replaceFirst("{stack}", "medium")), // small / medium / large
+                  // Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
                 ],
               ),
             );

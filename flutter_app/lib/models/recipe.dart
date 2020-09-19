@@ -1,6 +1,6 @@
 import 'package:flutter_app/models/recipe_canonical_logo.dart';
 import 'package:json_annotation/json_annotation.dart';
-
+import 'recipe_images.dart';
 
 part 'recipe.g.dart';
 
@@ -31,7 +31,7 @@ class Recipe {
   dynamic video;
   @JsonKey(name: 'scaling_hint') dynamic scalingHint;
   Canonical canonical;
-  List<dynamic> images;
+  List<RecipeImages> images;
   List<dynamic> urls;
   String created;
   String modified;

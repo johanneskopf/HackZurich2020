@@ -35,7 +35,10 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
     ..canonical = json['canonical'] == null
         ? null
         : Canonical.fromJson(json['canonical'] as Map<String, dynamic>)
-    ..images = json['images'] as List
+    ..images = (json['images'] as List)
+        ?.map((e) =>
+            e == null ? null : RecipeImages.fromJson(e as Map<String, dynamic>))
+        ?.toList()
     ..urls = json['urls'] as List
     ..created = json['created'] as String
     ..modified = json['modified'] as String
