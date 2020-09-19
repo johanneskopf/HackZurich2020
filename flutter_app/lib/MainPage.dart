@@ -196,21 +196,21 @@ final features = <Feature>[
   Feature(
       title: "Recipe Browser",
       icon: Icons.food_bank,
-      description: "View existing and create new grocery lists.",
+      description: "Be surprised by new recipes.",
       routeID: 1),
   Feature(
       title: "Favorites",
       icon: Icons.favorite,
-      description: "View existing and create new grocery lists.",
+      description: "View your favorite recipes.",
       routeID: 2),
   Feature(
-      title: "Next Store",
+      title: "Nearest Store",
       icon: Icons.location_on,
-      description: "View existing and create new grocery lists.",
+      description: "Find the closest store to buy all your groceries.",
       routeID: 3),
   Feature(
-      title: "History",
+      title: "Cart",
       icon: Icons.access_time,
-      description: "View existing and create new grocery lists.",
+      description: "View the scanned items in your shopping cart.",
       routeID: 4),
 ];
