@@ -40,7 +40,6 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
               // horizontal, this would produce 2 rows.
               crossAxisCount: 2,
               scrollDirection: Axis.vertical,
-              // Generate 100 Widgets that display their index in the List
               children: products
                   .map((Product product) => Center(
                           child: Container(
@@ -75,51 +74,12 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
                                   ),
                                 ),
                               ),
-                              // decoration: new BoxDecoration(
-                              //   border: new Border.all(
-                              //       color: Colors.transparent, width: 1.0),
-                              //   // borderRadius: const BorderRadius.all(const Radius.circular(30.0)),
-                              //   color: new Color.fromRGBO(0, 0, 0, 0.4),
-                              // ),
-                              // child: Text(
-                              //   'Item ${product.name}',
-                              //   style: TextStyle(
-                              //       color: Colors.white,
-                              //       fontWeight: FontWeight.bold,
-                              //       fontSize: 18.0),
-                              // ),
                             ),
                           ],
                         ),
-                        // Column(
-                        //     crossAxisAlignment: CrossAxisAlignment.start,
-                        //     children: [
-                        //       Image.network(product.image.original), //.replaceFirst("{stack}", "small")
-                        //       Text(
-                        //         'Item ${product.id}',
-                        //         style: Theme.of(context).textTheme.headline5,
-                        //       ),
-                        //     ])
                       )))
                   .toList(),
             );
-            // return ListView(
-            //   children: products
-            //       .map(
-            //         (Product product) => ListTile(
-            //       title: Text(product.name),
-            //       subtitle: Text("${product.id}"),
-            //       onTap: () => Navigator.of(context).push(
-            //         MaterialPageRoute(
-            //           builder: (context) => ProductDetail(
-            //             product: product,
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //   )
-            //       .toList(),
-            // );
           } else {
             return Center(child: CircularProgressIndicator());
           }
