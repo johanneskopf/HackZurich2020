@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/models/index.dart';
-import 'package:flutter_app/recipe.dart';
 import 'Globals.dart';
 
-import 'http_service.dart';
 import 'models/recipe.dart';
 
 import 'package:flutter/services.dart';
@@ -23,13 +21,10 @@ class _DetailPageState extends State<DetailPage> {
   final double roundedContainerHeight = 50;
   int currentStep = 0;
 
-  String removeDecimalZeroFormat(double n) {
-    return n.toStringAsFixed(n.truncateToDouble() == n ? 0 : 1);
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: <Widget>[
           Container(
@@ -278,7 +273,7 @@ Widget buildDetail() {
 Widget buildUserInfo() {
   return ListTile(
     leading: CircleAvatar(
-      backgroundColor: Colors.blue,
+      // backgroundColor: Colors.blue,
       radius: 24,
       backgroundImage: NetworkImage(widget.recipe.images.first.ratios[0].stack
           .replaceFirst("{stack}", "medium")),
@@ -308,7 +303,7 @@ Widget buildUserInfo() {
 class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
   final double roundedContainerHeight;
-  final recipe;
+  final Recipe recipe;
   int pageIdx;
 
   DetailSliverDelegate(this.expandedHeight, this.roundedContainerHeight,
@@ -328,7 +323,7 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
         child: Stack(
           children: <Widget>[
             Container(
-                color: Colors.blue,
+                // color: Colors.blue,
                 height: expandedHeight,
                 child: Image.network(
                   recipe.images.first.ratios[4].stack

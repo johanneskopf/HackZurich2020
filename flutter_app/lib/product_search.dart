@@ -1,6 +1,6 @@
 import 'package:flutter_app/http_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/product_detail.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'Globals.dart';
 import 'models/product.dart';
 
@@ -27,11 +27,11 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Products"),
+        title: Text("Scan a Product"),
       ),
       body: FutureBuilder(
         future: httpService.getProductsByName(
-            GroceryLists[groceryListId].items[groceryListItemId].name, 50),
+            GroceryLists[groceryListId].items[groceryListItemId].name, 20),
         builder: (BuildContext context, AsyncSnapshot<List<Product>> snapshot) {
           if (snapshot.hasData) {
             List<Product> products = snapshot.data;
@@ -41,24 +41,25 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
               crossAxisCount: 2,
               scrollDirection: Axis.vertical,
               children: products
-                  .map((Product product) => Center(
-                          child: Container(
+                  .map(
+                    (Product product) => Center(
+                      child: Container(
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey, width: 3.0),
                         ),
                         padding: const EdgeInsets.all(16.0),
-                        child: Stack(
-                          children: <Widget>[
-                            Container(
-                              alignment: Alignment.center,
-                              child: Image.network(product.image.original),
-                              //.replaceFirst("{stack}", "small")
-                              height: 250,
-                              width: double.infinity,
-                            ),
-                            Container(
-                              alignment: Alignment.bottomCenter,
-                              child: InkWell(
+                        child: InkWell(
+                          child: Stack(
+                            children: <Widget>[
+                              Container(
+                                alignment: Alignment.center,
+                                child: Image.network(product.image.original),
+                                //.replaceFirst("{stack}", "small")
+                                height: 250,
+                                width: double.infinity,
+                              ),
+                              Container(
+                                alignment: Alignment.bottomCenter,
                                 child: DecoratedBox(
                                   decoration: BoxDecoration(
                                       color: Color.fromRGBO(0, 0, 0, 0.4),
@@ -75,18 +76,29 @@ class _ProductSearchWidgetState extends State<ProductSearchPage> {
                                     ),
                                   ),
                                 ),
-                                onTap: () {
-                                  GroceryLists[groceryListId]
-                                      .items[groceryListItemId]
-                                      .BoughtProduct(product);
-                                  // setState(() {});
-                                  Navigator.pop(context);
-                                },
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          onTap: () {
+                            Fluttertoast.showToast(
+                                msg: "Successfully scanned '${product.name}'!",
+                                toastLength: Toast.LENGTH_SHORT,
+                                gravity: ToastGravity.BOTTOM,
+                                timeInSecForIosWeb: 1,
+                                backgroundColor: Colors.green,
+                                textColor: Colors.white,
+                                fontSize: 16.0);
+                            ScannedProducts.add(product);
+                            // GroceryLists[groceryListId]
+                            //     .items[groceryListItemId]
+                            //     .BoughtProduct(product);
+                            // setState(() {});
+                            Navigator.pop(context);
+                          },
                         ),
-                      )))
+                      ),
+                    ),
+                  )
                   .toList(),
             );
           } else {

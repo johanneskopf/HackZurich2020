@@ -7,7 +7,7 @@ import 'models/recipe.dart';
 import 'models/recipes_random.dart';
 
 class HttpService {
-  final String productsURL = "https://hackzurich-api.migros.ch/products?limit=50&offset=0&facet_sort_order=asc&sort=score&order=asc&region=national&view=browse&custom_image=false";
+  final String productsURL = "https://hackzurich-api.migros.ch/products?limit=20&offset=0&facet_sort_order=asc&sort=score&order=asc&region=national&view=browse&custom_image=false";
   final String recipe_search_URL = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_search";
   final String recipe_count_URL = "https://hackzurich-api.migros.ch/hack/recipe/recipes_de/_count";
   final String product_search_URL = "https://hackzurich-api.migros.ch/products?search={query}&limit={limit}&offset=0&facet_sort_order=asc&sort=score&order=asc&region=national&view=browse&custom_image=false";

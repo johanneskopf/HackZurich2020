@@ -52,3 +52,5 @@ class GroceryList {
 var GroceryLists = <GroceryList>[];
 
 var FavoriteRecipes = <Recipe>[];
+
+var ScannedProducts = <Product>[];

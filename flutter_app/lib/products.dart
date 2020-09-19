@@ -22,17 +22,15 @@ class ProductsPage extends StatelessWidget {
               children: products
                   .map(
                     (Product product) => ListTile(
-                  title: Text(product.name),
-                  subtitle: Text("${product.id}"),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => ProductDetail(
-                        product: product,
+                      title: Text(product.name),
+                      subtitle: Text("${product.id}"),
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => ProductDetailPage(product),
+                        ),
                       ),
                     ),
-                  ),
-                ),
-              )
+                  )
                   .toList(),
             );
           } else {

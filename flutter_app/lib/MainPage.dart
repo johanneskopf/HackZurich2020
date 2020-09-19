@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/FavoriteRecipes.dart';
 import 'package:flutter_app/GroceryListOverview.dart';
 import 'package:flutter_app/RecipeBrowser.dart';
+import 'package:flutter_app/shopping_cart.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -126,6 +127,8 @@ class MainButtonItem extends StatelessWidget {
                     return RecipeBrowserPage();
                   case 2:
                     return FavoriteRecipesPage();
+                  case 4:
+                    return ShoppingCartPage();
                   default:
                     return GroceryListOverviewPage();
                 }
