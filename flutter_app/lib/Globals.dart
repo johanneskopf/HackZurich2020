@@ -23,8 +23,8 @@ class GroceryList {
   
   void clone(GroceryList other){
     listName = other.listName;
+    items.clear();
     other.items.forEach((element) {
-      items.clear();
       var newItem = GroceryItem(element.name);
       newItem.SetDone(element.done);
       items.add(newItem);});
