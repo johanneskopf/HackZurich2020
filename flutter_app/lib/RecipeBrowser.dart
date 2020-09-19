@@ -6,7 +6,6 @@ class RecipeBrowserPage extends StatefulWidget {
 }
 
 class _RecipeBrowserWidgetState extends State<RecipeBrowserPage> {
-
   _listListener() {
     setState(() {});
   }
