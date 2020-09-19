@@ -20,4 +20,6 @@ export 'recipes_random.dart';
 export 'recipe_canonical_logo.dart';
 export 'recipe_images.dart';
 export 'recipe_images_ratio.dart';
+export 'recipe_ingredient.dart';
+export 'recipe_step.dart';
 export 'tag.dart';
