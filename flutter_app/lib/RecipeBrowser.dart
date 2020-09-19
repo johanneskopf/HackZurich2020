@@ -7,63 +7,10 @@ import 'models/recipe.dart';
 
 import 'package:flutter/services.dart';
 
-// class ListDetailWidget extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       height: 400,
-//       child: PageView.builder(
-//         itemBuilder: (context, index) {
-//           return GestureDetector(
-//             onTap: () {
-//               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-//                 return DetailPage(index);
-//               }));
-//             },
-//             child: Hero(
-//               tag: index,
-//               child: Card(
-//                 shape: RoundedRectangleBorder(
-//                   borderRadius: BorderRadius.circular(8),
-//                 ),
-//                 child: Container(
-//                   padding: EdgeInsets.all(8),
-//                   child: Stack(
-//                     children: <Widget>[
-//                       Positioned(
-//                         top: 0,
-//                         bottom: 20,
-//                         child: Image.asset(
-//                           'images/owl.jpg',
-//                           fit: BoxFit.cover,
-//                         ),
-//                       ),
-//                       Positioned(
-//                         right: 10,
-//                         bottom: 0,
-//                         child: CircleAvatar(
-//                           backgroundColor: Colors.red,
-//                           child: Icon(
-//                             Icons.arrow_forward,
-//                             color: Colors.white,
-//                             size: 24,
-//                           ),
-//                         ),
-//                       )
-//                     ],
-//                   ),
-//                 ),
-//               ),
-//             ),
-//           );
-//         },
-//       ),
-//     );
-//   }
-// }
 
 class DetailPage extends StatefulWidget {
   final recipe;
+  var currentPage = 0;
 
   DetailPage(this.recipe);
 
@@ -80,11 +27,15 @@ class _DetailPageState extends State<DetailPage> {
     return Scaffold(
       body: Stack(
         children: <Widget>[
+          Container(
+            padding: EdgeInsets.only( bottom:50 ),
+            child:
           CustomScrollView(
             slivers: <Widget>[
               buildSliverHead(),
               SliverToBoxAdapter(child: buildDetail()),
             ],
+          ),
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -121,7 +72,43 @@ class _DetailPageState extends State<DetailPage> {
                 ],
               ),
             ),
-          )
+          ),
+
+          Positioned(
+            bottom: 0,
+            left: 0,
+            child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                color: Theme.of(context).accentColor,
+                child:
+                Row(
+                  children: <Widget>[
+                    Expanded(child: FlatButton(
+                      child: Text("Info"),
+                      onPressed: () {
+                        widget.currentPage = 0;
+                        setState(() {});
+                      },
+                    )),
+                    Expanded(child: FlatButton(
+                      child: Text("Incredients"),
+                      onPressed: () {
+                        widget.currentPage = 1;
+                        setState(() {});
+                      },
+                    )),
+                    Expanded(child: FlatButton(
+                      child: Text("Steps"),
+                      onPressed: () {
+                        widget.currentPage = 2;
+                        setState(() {});
+                      },
+                    ))
+                  ],
+                )
+            ),
+          ),
         ],
       ),
     );
@@ -133,8 +120,26 @@ class _DetailPageState extends State<DetailPage> {
         expandedHeight,
         roundedContainerHeight,
         widget.recipe,
+        widget.currentPage
       ),
     );
+  }
+
+  Widget getBasicText() {
+    return Text(widget.recipe.teasertext,
+        style: TextStyle(
+        color: Colors.black26,
+        height: 1.4,
+        fontSize: 16,
+    ));
+  }
+  Widget getSteps() {
+    return Text("step " * 100,
+        style: TextStyle(
+          color: Colors.black26,
+          height: 1.4,
+          fontSize: 16,
+        ));
   }
 
   Widget buildDetail() {
@@ -149,15 +154,9 @@ class _DetailPageState extends State<DetailPage> {
               vertical: 15,
               horizontal: 15,
             ),
-            child: Text(
-              'Creates insets with symmetrical vertical and horizontal offsets.' *
-                  30,
-              style: TextStyle(
-                color: Colors.black26,
-                height: 1.4,
-                fontSize: 16,
-              ),
-            ),
+            child:
+              widget.currentPage == 0? getBasicText() : getSteps()
+
           ),
         ],
       ),
@@ -170,11 +169,11 @@ class _DetailPageState extends State<DetailPage> {
         backgroundColor: Colors.blue,
         radius: 24,
         backgroundImage:
-            NetworkImage(widget.recipe.images.first.ratios.first.stack
+            NetworkImage(widget.recipe.images.first.ratios[0].stack
               .replaceFirst("{stack}", "medium")),
       ),
       title: Text(widget.recipe.title),
-      subtitle: Text(widget.recipe.tags.toString()),
+      subtitle: Text("widget.recipe.tags"),
       trailing: Icon(Icons.share),
     );
   }
@@ -184,9 +183,10 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
   final double roundedContainerHeight;
   final recipe;
+  int pageIdx;
 
   DetailSliverDelegate(
-      this.expandedHeight, this.roundedContainerHeight, this.recipe);
+      this.expandedHeight, this.roundedContainerHeight, this.recipe, this.pageIdx);
 
   @override
   Widget build(
@@ -203,12 +203,13 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
           children: <Widget>[
             Container(
               color: Colors.blue,
+        height: expandedHeight,
         child:
             Image.network(
-              recipe.images.first.ratios.first.stack
-                  .replaceFirst("{stack}", "medium"),
+              recipe.images.first.ratios[4].stack
+                  .replaceFirst("{stack}", "large"),
               width: MediaQuery.of(context).size.width,
-              fit: BoxFit.fill,
+              fit: BoxFit.cover,
             )),
             Positioned(
               top: expandedHeight - roundedContainerHeight - shrinkOffset,
@@ -225,29 +226,30 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
                 ),
               ),
             ),
-            Positioned(
-              top: expandedHeight - 120 - shrinkOffset,
-              left: 30,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Flutter',
-                    style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                      fontSize: 30,
-                    ),
-                  ),
-                  Text(
-                    'owl',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  ),
-                ],
-              ),
-            )
+
+            // Positioned(
+            //   top: expandedHeight - 120 - shrinkOffset,
+            //   left: 30,
+            //   child: Column(
+            //     crossAxisAlignment: CrossAxisAlignment.start,
+            //     children: <Widget>[
+            //     //   Text(
+            //     //     "Recipe",
+            //     //     style: TextStyle(
+            //     //       color: Theme.of(context).primaryColor,
+            //     //       fontSize: 30,
+            //     //     ),
+            //     //   ),
+            //     //   Text(
+            //     //     'owl',
+            //     //     style: TextStyle(
+            //     //       color: Colors.white,
+            //     //       fontSize: 15,
+            //     //     ),
+            //     //   ),
+            //     ],
+            //   ),
+            // )
           ],
         ),
       ),
@@ -369,7 +371,8 @@ class _RecipeBrowserWidgetState extends State<RecipeBrowserPage> {
                                       )),
                                   Expanded(
                                       flex: 2,
-                                      child: Center(
+                                      child:
+                                      Center(
                                           child: Text(
                                         recipe.title.toString(),
                                         style: TextStyle(fontSize: 20),
@@ -395,42 +398,6 @@ class _RecipeBrowserWidgetState extends State<RecipeBrowserPage> {
                         ),
                       ),
                     ));
-                // return Card(
-                //   child: Column(
-                //     crossAxisAlignment: CrossAxisAlignment.center,
-                //     children: <Widget>[
-                //       ListTile(
-                //         title: Text("Title"),
-                //         subtitle: Text(recipe.title.toString()),
-                //       ),
-                //       ListTile(
-                //         title: Text("ID"),
-                //         subtitle: Text(recipe.id),
-                //       ),
-                //       ListTile(
-                //         title: Text("Duration Total"),
-                //         subtitle: Text("${recipe.durationTotal}"),
-                //       ),
-                //       ListTile(
-                //         title: Text("Language"),
-                //         subtitle: Text("${recipe.language}"),
-                //       ),
-                //       ListTile(
-                //         title: Text("Rating"),
-                //         subtitle: Text(
-                //             "${recipe.rating.rounded == null ? "No rating" : recipe.rating.rounded}"),
-                //       ),
-                //       // ListTile(
-                //       //   title: Text("Image"),
-                //       //   subtitle: Text("${recipe.images.first.ratios.first.stack.replaceFirst("{stack}", "large")}"),
-                //       // ),
-                //       Image.network(recipe.images.first.ratios.first.stack
-                //           .replaceFirst("{stack}", "medium")),
-                //       // small / medium / large
-                //       // Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
-                //     ],
-                //   ),
-                // );
               } else {
                 return Center(child: CircularProgressIndicator());
               }
