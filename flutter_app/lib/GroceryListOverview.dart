@@ -27,7 +27,7 @@ class _GroveryListOverview extends State<GroceryListOverviewPage> {
         title: const Text('Grocery Lists'),
       ),
       body: Container(
-          height: MediaQuery.of(context).size.height * 0.8,
+          height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: ListView.builder(
             padding: const EdgeInsets.all(8),
@@ -42,7 +42,6 @@ class _GroveryListOverview extends State<GroceryListOverviewPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
           onPressed: () async {
-            print("button action clicked");
             bool result = await Navigator.push(
               context,
               MaterialPageRoute(
