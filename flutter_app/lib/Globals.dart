@@ -19,7 +19,6 @@ class GroceryItem {
   void BoughtProduct(Product p){
     bought = true;
     product = p;
-    name = product.name; // update title of list item
   }
 }
 
