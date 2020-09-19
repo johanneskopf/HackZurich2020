@@ -497,38 +497,7 @@
     "url":  "https://migusto.migros.ch/de/rezepte/spiesschen-mit-wildschweinrohschinken",
     "logo":  "$recipe_canonical_logo"
   },
-  "images":  [
-    {
-      "id":  "53280",
-      "hash":  "7167BD94596AB82FBD296A58E9948DB9218B3B39",
-      "title":  "Spiesschen mit Wildschweinrohschinken",
-      "alt_text":  "Spiesschen mit Wildschweinrohschinken",
-      "order":  1,
-      "modification_date":  "2017-05-12T20:20:23Z",
-      "ratios":  [
-        {
-          "ratio":  "4-3",
-          "stack":  "https://recipeimages.migros.ch/{stack}/b3c332b9ac0a5e4aa10215e3b50eeb77479afe5f/spiesschen-mit-wildschweinrohschinken-0-4-3.jpg"
-        },
-        {
-          "ratio":  "16-9",
-          "stack":  "https://recipeimages.migros.ch/{stack}/1e874039054bd0b83aafdaa9d2a056d298a725ca/spiesschen-mit-wildschweinrohschinken-0-16-9.jpg"
-        },
-        {
-          "ratio":  "3-2",
-          "stack":  "https://recipeimages.migros.ch/{stack}/27bb425c12665faf010422b7137ab826e8f9f15f/spiesschen-mit-wildschweinrohschinken-0-3-2.jpg"
-        },
-        {
-          "ratio":  "47-20",
-          "stack":  "https://recipeimages.migros.ch/{stack}/85002e434d4ff2b5fa66ecd755424572f8039a12/spiesschen-mit-wildschweinrohschinken-0-47-20.jpg"
-        },
-        {
-          "ratio":  "1-1",
-          "stack":  "https://recipeimages.migros.ch/{stack}/b820346c24eab713e500b5d7833d61066638f8ed/spiesschen-mit-wildschweinrohschinken-0-1-1.jpg"
-        }
-      ]
-    }
-  ],
+  "images": "$[]recipe_images",
   "urls":  [
     {
       "type":  "saison",

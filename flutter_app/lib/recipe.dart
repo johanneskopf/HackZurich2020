@@ -25,7 +25,7 @@ class RecipePage extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     title: Text("Title"),
-                    subtitle: Text(recipe.originalTitle.toString()),
+                    subtitle: Text(recipe.title.toString()),
                   ),
                   ListTile(
                     title: Text("ID"),
@@ -39,6 +39,12 @@ class RecipePage extends StatelessWidget {
                     title: Text("Language"),
                     subtitle: Text("${recipe.language}"),
                   ),
+                  ListTile(
+                    title: Text("Rating"),
+                    subtitle: Text("${recipe.rating.rounded == null ? "No rating" : recipe.rating.rounded}"),
+                  ),
+                  // Image.network(recipe.images.first.),
+                  Image.network('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg'),
                 ],
               ),
             );

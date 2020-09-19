@@ -23,7 +23,7 @@ class Product {
   List<dynamic> categories;
   @JsonKey(name: 'additional_categories') List<dynamic> additionalCategories;
   List<dynamic> features;
-  Image image;
+  Image1 image;
   @JsonKey(name: 'image_transparent') ImageTransparent imageTransparent;
   @JsonKey(name: 'internal_features') List<dynamic> internalFeatures;
   Vat vat;
@@ -52,14 +52,14 @@ class Description {
 }
 
 @JsonSerializable()
-class Image {
-      Image();
+class Image1 {
+      Image1();
 
   String original;
   String stack;
 
-  factory Image.fromJson(Map<String,dynamic> json) => _$ImageFromJson(json);
-  Map<String, dynamic> toJson() => _$ImageToJson(this);
+  factory Image1.fromJson(Map<String,dynamic> json) => _$Image1FromJson(json);
+  Map<String, dynamic> toJson() => _$Image1ToJson(this);
 }
 
 @JsonSerializable()

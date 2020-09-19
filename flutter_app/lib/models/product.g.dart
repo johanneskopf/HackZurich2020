@@ -31,7 +31,7 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
     ..features = json['features'] as List
     ..image = json['image'] == null
         ? null
-        : Image.fromJson(json['image'] as Map<String, dynamic>)
+        : Image1.fromJson(json['image'] as Map<String, dynamic>)
     ..imageTransparent = json['image_transparent'] == null
         ? null
         : ImageTransparent.fromJson(
@@ -99,13 +99,13 @@ Map<String, dynamic> _$DescriptionToJson(Description instance) =>
       'source': instance.source,
     };
 
-Image _$ImageFromJson(Map<String, dynamic> json) {
-  return Image()
+Image1 _$Image1FromJson(Map<String, dynamic> json) {
+  return Image1()
     ..original = json['original'] as String
     ..stack = json['stack'] as String;
 }
 
-Map<String, dynamic> _$ImageToJson(Image instance) => <String, dynamic>{
+Map<String, dynamic> _$Image1ToJson(Image1 instance) => <String, dynamic>{
       'original': instance.original,
       'stack': instance.stack,
     };
