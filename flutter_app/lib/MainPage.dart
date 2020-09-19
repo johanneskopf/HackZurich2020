@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Favorites.dart';
+import 'package:flutter_app/FavoriteRecipes.dart';
 import 'package:flutter_app/GroceryListOverview.dart';
 import 'package:flutter_app/RecipeBrowser.dart';
 
@@ -125,7 +125,7 @@ class MainButtonItem extends StatelessWidget {
                   case 1:
                     return RecipeBrowserPage();
                   case 2:
-                    return FavoritesPage();
+                    return FavoriteRecipesPage();
                   default:
                     return GroceryListOverviewPage();
                 }

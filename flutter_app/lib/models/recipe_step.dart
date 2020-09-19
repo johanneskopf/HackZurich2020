@@ -7,7 +7,7 @@ part 'recipe_step.g.dart';
 class RecipeStep {
       RecipeStep();
 
-  dynamic title;
+  String title;
   String description;
   dynamic video;
   dynamic image;

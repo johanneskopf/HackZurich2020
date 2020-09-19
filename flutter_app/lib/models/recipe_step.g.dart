@@ -8,7 +8,7 @@ part of 'recipe_step.dart';
 
 RecipeStep _$RecipeStepFromJson(Map<String, dynamic> json) {
   return RecipeStep()
-    ..title = json['title']
+    ..title = json['title'] == null ? "" : json['title'] as String
     ..description = json['description'] as String
     ..video = json['video']
     ..image = json['image'];
