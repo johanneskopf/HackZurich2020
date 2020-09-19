@@ -218,8 +218,21 @@ class _DetailPageState extends State<DetailPage> {
             .replaceFirst("{stack}", "medium")),
       ),
       title: Text(widget.recipe.title),
-      subtitle: Text("Calories: ${widget.recipe.nutrients.calories}"),
-      trailing: Icon(Icons.share),
+      subtitle: Text("Calories: ${widget.recipe.nutrients.calories} cals | Duration: ${widget.recipe.durationTotalInMinutes} min"),
+      trailing: GestureDetector(
+        child: Icon(widget.recipe.isFavorite? Icons.favorite : Icons.favorite_border),
+        onTap: () {
+          if(widget.recipe.isFavorite){
+            FavoriteRecipes.remove(widget.recipe);
+          }
+          else {
+            FavoriteRecipes.add(widget.recipe);
+          }
+          widget.recipe.isFavorite = !widget.recipe.isFavorite;
+
+          setState(() {});
+        },
+      ),
     );
   }
 }
