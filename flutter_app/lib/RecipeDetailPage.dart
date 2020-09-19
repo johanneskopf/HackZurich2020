@@ -8,7 +8,7 @@ import 'models/recipe.dart';
 import 'package:flutter/services.dart';
 
 class DetailPage extends StatefulWidget {
-  final recipe;
+  final Recipe recipe;
   var currentPage = 0;
 
   DetailPage(this.recipe);
@@ -141,7 +141,8 @@ class _DetailPageState extends State<DetailPage> {
         return Column(
           children: <Widget>[
             ListTile(
-              title: Text(widget.recipe.ingredients[index].name.singular),
+              title: Text( //widget.recipe.sizes[0].ingredientBlocks[index].ingredients[]
+                  widget.recipe.ingredients[index].name.singular), // sizes[0] => for 2 Persons; sizes[1] => for 4 Persons; ... sizes[4] => 10 Persons
             ),
             Divider(), //                           <-- Divider
           ],
