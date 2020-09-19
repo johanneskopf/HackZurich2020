@@ -1,0 +1,1052 @@
+{
+  "taxonomies":  [
+    {
+      "id":  "6493428",
+      "name":  "Wild",
+      "modified":  "2018-05-29T07:16:55Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  146152
+    },
+    {
+      "id":  "146184",
+      "name":  "ApÃ©ro \u0026 Snack",
+      "modified":  "2016-12-09T11:56:23Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  146152
+    },
+    {
+      "id":  "146080",
+      "name":  "Unter 30\u0027",
+      "modified":  "2017-01-05T15:48:48Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  146072
+    },
+    {
+      "id":  "147176",
+      "name":  "Partyrezepte",
+      "modified":  "2016-12-09T12:16:55Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  147148
+    },
+    {
+      "id":  "147204",
+      "name":  "Kochen lernen",
+      "modified":  "2016-12-09T12:16:55Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  147148
+    },
+    {
+      "id":  "147091",
+      "name":  "Schweiz",
+      "modified":  "2016-12-09T12:13:50Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  147011
+    },
+    {
+      "id":  "147208",
+      "name":  "Herbstrezepte",
+      "modified":  "2018-06-25T11:06:37Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  147148
+    },
+    {
+      "id":  "146958",
+      "name":  "Einsteiger",
+      "modified":  "2017-02-09T10:23:00Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  146946
+    },
+    {
+      "id":  "14679502",
+      "name":  "15 Min.",
+      "modified":  "2019-10-15T13:44:34Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  14679442
+    },
+    {
+      "id":  "14679529",
+      "name":  "30 Min.",
+      "modified":  "2019-10-15T13:48:40Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  14679442
+    },
+    {
+      "id":  "14679592",
+      "name":  "60 Min.",
+      "modified":  "2019-10-15T13:49:05Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  14679442
+    },
+    {
+      "id":  "146212",
+      "name":  "Fleisch \u0026 Fisch",
+      "modified":  "2016-12-09T11:56:23Z",
+      "topic_classification":  null,
+      "taxonomy_group_id":  146152
+    }
+  ],
+  "taxonomy_groups":  [
+    {
+      "id":  146152,
+      "name":  "Gerichte",
+      "modified":  "2016-12-11T20:11:51Z"
+    },
+    {
+      "id":  146072,
+      "name":  "Aktive Zubereitungszeit",
+      "modified":  "2016-12-09T11:55:41Z"
+    },
+    {
+      "id":  147148,
+      "name":  "Saison \u0026 Anlass",
+      "modified":  "2016-12-11T20:11:51Z"
+    },
+    {
+      "id":  147011,
+      "name":  "LÃ¤nderkÃ¼che",
+      "modified":  "2016-12-11T20:11:51Z"
+    },
+    {
+      "id":  146946,
+      "name":  "Kochlevel",
+      "modified":  "2017-02-09T10:26:03Z"
+    },
+    {
+      "id":  14679442,
+      "name":  "Fertig in",
+      "modified":  "2019-09-24T15:24:04Z"
+    }
+  ],
+  "id":  "22790",
+  "language":  "de",
+  "title":  "Spiesschen mit Wildschweinrohschinken",
+  "original_title":  null,
+  "teasertext":  "Fein als Fingerfood oder Vorspeise: Birnenschnitze, Tranchen von Wildschweinrohschinken mit Lattich und WinzerkÃ¤se-StÃ¼cke auf ein Spiesschen gesteckt.",
+  "slug":  "spiesschen-mit-wildschweinrohschinken",
+  "base_unit":  [
+
+  ],
+  "durations":  [
+    {
+      "prefix":  "ca.",
+      "quantity":  15,
+      "quantity_up_to":  null,
+      "text":  "Zubereitung",
+      "unit":  "Minuten"
+    }
+  ],
+  "duration_total":  "PT15M",
+  "duration_total_in_minutes":  15,
+  "has_video":  false,
+  "hints":  [
+
+  ],
+  "nutrients":  {
+    "calories":  260,
+    "carbohydrates":  15,
+    "carbohydrates_percent":  26.7,
+    "fat":  9,
+    "fat_percent":  36.0,
+    "kilojoule":  1050,
+    "proteins":  21,
+    "proteins_percent":  37.3
+  },
+  "steps":  [
+    {
+      "title":  null,
+      "description":  "Birnen samt Schale in Schnitze schneiden, KerngehÃ¤use entfernen. Schnitze mit Zitronensaft einreiben. KÃ¤se in ca. 1 cm grosse WÃ¼rfel schneiden. Je 1 Rohschinkentranche mit etwas Senf bestreichen und mit einer zweiten Tranche belegen. LattichblÃ¤tter auf die GrÃ¶sse der Rohschinkentranchen schneiden. Darauflegen und einrollen. Abwechslungsweise Birnenschnitze, KÃ¤se und Rohschinkenrollen aufspiessen. Spiesse auf eine Platte legen und mit Honig betrÃ¤ufeln. Mit Blumenpfeffer bestreuen.",
+      "video":  null,
+      "image":  null
+    }
+  ],
+  "ingredients":  [
+    {
+      "id":  14778,
+      "synonyms":  [
+        "Limonensaft"
+      ],
+      "name":  {
+        "singular":  "Zitronensaft",
+        "plural":  "Zitronensaft"
+      },
+      "modified":  "2019-10-04T14:27:18Z",
+      "family_ids":  [
+        14056118,
+        14056119
+      ]
+    },
+    {
+      "id":  14465,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Birne",
+        "plural":  "Birnen"
+      },
+      "modified":  "2019-09-30T15:56:23Z",
+      "family_ids":  [
+        14055428,
+        14648563
+      ]
+    },
+    {
+      "id":  16189,
+      "synonyms":  [
+        "RÃ¶mersalatblÃ¤tter"
+      ],
+      "name":  {
+        "singular":  "Lattichblatt",
+        "plural":  "LattichblÃ¤tter"
+      },
+      "modified":  "2019-10-01T11:18:13Z",
+      "family_ids":  [
+        14055762
+      ]
+    },
+    {
+      "id":  17035,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "WinzerkÃ¤se",
+        "plural":  "WinzerkÃ¤se"
+      },
+      "modified":  "2019-10-04T14:20:46Z",
+      "family_ids":  [
+        14055713,
+        14055648
+      ]
+    },
+    {
+      "id":  15558,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Wildschwein-Rohschinken",
+        "plural":  "Wildschwein-Rohschinken"
+      },
+      "modified":  "2019-10-04T14:20:42Z",
+      "family_ids":  [
+        14055930,
+        14056106
+      ]
+    },
+    {
+      "id":  16447,
+      "synonyms":  [
+        "Pfeffer mit BlumenblÃ¼ten",
+        "BlÃ¼tenpfefffer"
+      ],
+      "name":  {
+        "singular":  "Blumenpfeffer",
+        "plural":  "Blumenpfeffer"
+      },
+      "modified":  "2019-09-30T16:01:26Z",
+      "family_ids":  [
+        14055862
+      ]
+    },
+    {
+      "id":  17277,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Thymianhonig",
+        "plural":  "Thymianhonig"
+      },
+      "modified":  "2020-02-04T09:51:02Z",
+      "family_ids":  [
+        14055666
+      ]
+    },
+    {
+      "id":  17334,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Feigensenf",
+        "plural":  "Feigensenf"
+      },
+      "modified":  "2019-09-30T16:58:11Z",
+      "family_ids":  [
+        14056012
+      ]
+    }
+  ],
+  "ingredient_families":  [
+    {
+      "id":  14056118,
+      "synonyms":  [
+        "Citrone",
+        "Limone"
+      ],
+      "name":  {
+        "singular":  "Zitrone",
+        "plural":  "Zitronen"
+      },
+      "modified":  "2019-10-04T14:24:41Z"
+    },
+    {
+      "id":  14648563,
+      "synonyms":  [
+        "Obst"
+      ],
+      "name":  {
+        "singular":  "Frucht",
+        "plural":  "FrÃ¼chte"
+      },
+      "modified":  "2019-12-20T13:24:25Z"
+    },
+    {
+      "id":  14056119,
+      "synonyms":  [
+        "Limonensaft"
+      ],
+      "name":  {
+        "singular":  "Zitronensaft",
+        "plural":  "Zitronensaft"
+      },
+      "modified":  "2019-10-04T14:27:18Z"
+    },
+    {
+      "id":  14055428,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Birne",
+        "plural":  "Birnen"
+      },
+      "modified":  "2019-09-30T15:56:23Z"
+    },
+    {
+      "id":  14055762,
+      "synonyms":  [
+        "RÃ¶mer-Salat",
+        "rÃ¶mischer Salat",
+        "Romana-Salat",
+        "Lattuga",
+        "Bindesalat",
+        "Kochsalat",
+        "Florentiner Salat"
+      ],
+      "name":  {
+        "singular":  "Lattich",
+        "plural":  "Lattiche"
+      },
+      "modified":  "2019-10-01T11:18:12Z"
+    },
+    {
+      "id":  14055713,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "KÃ¤se",
+        "plural":  "KÃ¤se"
+      },
+      "modified":  "2019-09-30T15:42:16Z"
+    },
+    {
+      "id":  14055648,
+      "synonyms":  [
+        "halbharter KÃ¤se"
+      ],
+      "name":  {
+        "singular":  "HalbhartkÃ¤se",
+        "plural":  "HalbhartkÃ¤se"
+      },
+      "modified":  "2019-09-30T15:42:16Z"
+    },
+    {
+      "id":  14055930,
+      "synonyms":  [
+
+      ],
+      "name":  {
+        "singular":  "Rohschinken",
+        "plural":  "Rohschinken"
+      },
+      "modified":  "2019-09-30T16:33:48Z"
+    }
+  ],
+  "tags":  [
+    {
+      "name":  "FrÃ¼chte",
+      "id":  "root.266.",
+      "type":  "contains"
+    },
+    {
+      "name":  "Milchprodukte",
+      "id":  "root.214.",
+      "type":  "contains"
+    },
+    {
+      "name":  "Wild",
+      "id":  "root.264.",
+      "type":  "contains"
+    },
+    {
+      "name":  "GemÃ¼se",
+      "id":  "root.234.",
+      "type":  "contains"
+    },
+    {
+      "name":  "Fingerfood",
+      "id":  "7",
+      "type":  "dish-types"
+    },
+    {
+      "name":  "Wild",
+      "id":  "wild",
+      "type":  "dish-types"
+    },
+    {
+      "name":  "ApÃ©ro",
+      "id":  "248",
+      "type":  "menu-type"
+    },
+    {
+      "name":  "SaisonkÃ¼che",
+      "id":  "saisonkueche",
+      "type":  "created-for"
+    },
+    {
+      "name":  "Aperitif",
+      "id":  "339",
+      "type":  "wine"
+    },
+    {
+      "name":  "Kurze Rezepte (\u003c 30 Min.)",
+      "id":  "323",
+      "type":  "migros-duration"
+    },
+    {
+      "name":  "fertig in 15 Min",
+      "id":  "fertigin15min",
+      "type":  "migros-duration"
+    },
+    {
+      "name":  "Fleisch/Fisch",
+      "id":  "root.meat-fish.",
+      "type":  "nutrition-philosophy"
+    },
+    {
+      "name":  "Party",
+      "id":  "19",
+      "type":  "occasions"
+    },
+    {
+      "name":  "Einsteiger",
+      "id":  "227",
+      "type":  "recipe-difficulty"
+    },
+    {
+      "name":  "Normalrezept",
+      "id":  "normal",
+      "type":  "recipe-type"
+    },
+    {
+      "name":  "Schweiz",
+      "id":  "root.28.212.",
+      "type":  "region"
+    },
+    {
+      "name":  "Herbst",
+      "id":  "4",
+      "type":  "season"
+    },
+    {
+      "name":  "Sep",
+      "id":  "root.sep.",
+      "type":  "season-table-values"
+    },
+    {
+      "name":  "Okt",
+      "id":  "root.oct.",
+      "type":  "season-table-values"
+    },
+    {
+      "name":  "Nov",
+      "id":  "root.nov.",
+      "type":  "season-table-values"
+    },
+    {
+      "name":  "Sep",
+      "id":  "root.sep.",
+      "type":  "season-table-values-wwf"
+    },
+    {
+      "name":  "Okt",
+      "id":  "root.oct.",
+      "type":  "season-table-values-wwf"
+    }
+  ],
+  "utilities":  [
+
+  ],
+  "video":  null,
+  "scaling_hint":  null,
+  "canonical":  {
+    "master":  "migusto",
+    "url":  "https://migusto.migros.ch/de/rezepte/spiesschen-mit-wildschweinrohschinken",
+    "logo":  "$recipe_canonical_logo"
+  },
+  "images":  [
+    {
+      "id":  "53280",
+      "hash":  "7167BD94596AB82FBD296A58E9948DB9218B3B39",
+      "title":  "Spiesschen mit Wildschweinrohschinken",
+      "alt_text":  "Spiesschen mit Wildschweinrohschinken",
+      "order":  1,
+      "modification_date":  "2017-05-12T20:20:23Z",
+      "ratios":  [
+        {
+          "ratio":  "4-3",
+          "stack":  "https://recipeimages.migros.ch/{stack}/b3c332b9ac0a5e4aa10215e3b50eeb77479afe5f/spiesschen-mit-wildschweinrohschinken-0-4-3.jpg"
+        },
+        {
+          "ratio":  "16-9",
+          "stack":  "https://recipeimages.migros.ch/{stack}/1e874039054bd0b83aafdaa9d2a056d298a725ca/spiesschen-mit-wildschweinrohschinken-0-16-9.jpg"
+        },
+        {
+          "ratio":  "3-2",
+          "stack":  "https://recipeimages.migros.ch/{stack}/27bb425c12665faf010422b7137ab826e8f9f15f/spiesschen-mit-wildschweinrohschinken-0-3-2.jpg"
+        },
+        {
+          "ratio":  "47-20",
+          "stack":  "https://recipeimages.migros.ch/{stack}/85002e434d4ff2b5fa66ecd755424572f8039a12/spiesschen-mit-wildschweinrohschinken-0-47-20.jpg"
+        },
+        {
+          "ratio":  "1-1",
+          "stack":  "https://recipeimages.migros.ch/{stack}/b820346c24eab713e500b5d7833d61066638f8ed/spiesschen-mit-wildschweinrohschinken-0-1-1.jpg"
+        }
+      ]
+    }
+  ],
+  "urls":  [
+    {
+      "type":  "saison",
+      "url":  "https://migusto.migros.ch/de/rezepte/spiesschen-mit-wildschweinrohschinken"
+    }
+  ],
+  "created":  "2015-04-17T14:38:43Z",
+  "modified":  "2019-11-28T11:58:38Z",
+  "published":  "2011-09-12T09:16:00Z",
+  "sizes":  [
+    {
+      "default":  false,
+      "text":  "2 Personen",
+      "text_full":  "FÃ¼r 2 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  2,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birne",
+              "amount":  "@{is_approximate=False; quantity=1; quantity_up_to=; text=1; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=0.5; quantity_up_to=; text=Â½ EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=60; quantity_up_to=; text=60 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=8; quantity_up_to=; text=8 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=2; quantity_up_to=; text=2 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=2; quantity_up_to=; text=2; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=0.5; quantity_up_to=; text=Â½ EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=1.5; quantity_up_to=; text=1,5 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default":  true,
+      "text":  "4 Personen",
+      "text_full":  "FÃ¼r 4 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  4,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birnen",
+              "amount":  "@{is_approximate=False; quantity=2; quantity_up_to=; text=2; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=1; quantity_up_to=; text=1 EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=120; quantity_up_to=; text=120 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=16; quantity_up_to=; text=16 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=4; quantity_up_to=; text=4 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=4; quantity_up_to=; text=4; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=1; quantity_up_to=; text=1 EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=3; quantity_up_to=; text=3 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default":  false,
+      "text":  "6 Personen",
+      "text_full":  "FÃ¼r 6 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  6,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birnen",
+              "amount":  "@{is_approximate=False; quantity=3; quantity_up_to=; text=3; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=1.5; quantity_up_to=; text=1Â½ EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=180; quantity_up_to=; text=180 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=24; quantity_up_to=; text=24 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=6; quantity_up_to=; text=6 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=6; quantity_up_to=; text=6; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=1.5; quantity_up_to=; text=1Â½ EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=4.5; quantity_up_to=; text=4,5 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default":  false,
+      "text":  "8 Personen",
+      "text_full":  "FÃ¼r 8 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  8,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birnen",
+              "amount":  "@{is_approximate=False; quantity=4; quantity_up_to=; text=4; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=2; quantity_up_to=; text=2 EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=240; quantity_up_to=; text=240 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=32; quantity_up_to=; text=32 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=8; quantity_up_to=; text=8 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=8; quantity_up_to=; text=8; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=2; quantity_up_to=; text=2 EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=6; quantity_up_to=; text=6 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default":  false,
+      "text":  "10 Personen",
+      "text_full":  "FÃ¼r 10 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  10,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birnen",
+              "amount":  "@{is_approximate=False; quantity=5; quantity_up_to=; text=5; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=2.5; quantity_up_to=; text=2Â½ EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=300; quantity_up_to=; text=300 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=40; quantity_up_to=; text=40 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=10; quantity_up_to=; text=10 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=10; quantity_up_to=; text=10; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=2.5; quantity_up_to=; text=2Â½ EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=7.5; quantity_up_to=; text=7,5 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "default":  false,
+      "text":  "12 Personen",
+      "text_full":  "FÃ¼r 12 Personen",
+      "unit":  "Personen",
+      "unit_singular":  "Person",
+      "quantity":  12,
+      "base_unit":  [
+
+      ],
+      "ingredient_blocks":  [
+        {
+          "title":  null,
+          "ingredients":  [
+            {
+              "id":  "14465",
+              "is_main_ingredient":  true,
+              "text":  "Birnen",
+              "amount":  "@{is_approximate=False; quantity=6; quantity_up_to=; text=6; unit=}",
+              "availability":  null,
+              "cultivar":  "@{id=18796; name=Williams}"
+            },
+            {
+              "id":  "14778",
+              "is_main_ingredient":  false,
+              "text":  "Zitronensaft",
+              "amount":  "@{is_approximate=False; quantity=3; quantity_up_to=; text=3 EL; unit=EL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17035",
+              "is_main_ingredient":  true,
+              "text":  "WinzerkÃ¤se",
+              "amount":  "@{is_approximate=False; quantity=360; quantity_up_to=; text=360 g; unit=g}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "15558",
+              "is_main_ingredient":  true,
+              "text":  "Wildschwein-Rohschinken",
+              "amount":  "@{is_approximate=False; quantity=48; quantity_up_to=; text=48 Tranchen; unit=Tranchen}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17334",
+              "is_main_ingredient":  false,
+              "text":  "Feigensenf",
+              "amount":  "@{is_approximate=False; quantity=12; quantity_up_to=; text=12 TL; unit=TL}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "16189",
+              "is_main_ingredient":  false,
+              "text":  "LattichblÃ¤tter",
+              "amount":  "@{is_approximate=False; quantity=12; quantity_up_to=; text=12; unit=}",
+              "availability":  null,
+              "cultivar":  null
+            },
+            {
+              "id":  "17277",
+              "is_main_ingredient":  false,
+              "text":  "Thymianhonig",
+              "amount":  "@{is_approximate=False; quantity=3; quantity_up_to=; text=3 EL; unit=EL}",
+              "availability":  "@{key=root.delikatessenshop.; name=aus dem DelikatessgeschÃ¤ft}",
+              "cultivar":  null
+            },
+            {
+              "id":  "16447",
+              "is_main_ingredient":  false,
+              "text":  "Blumenpfeffer",
+              "amount":  "@{is_approximate=False; quantity=9; quantity_up_to=; text=9 Prisen; unit=Prisen}",
+              "availability":  null,
+              "cultivar":  null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "available_sizes":  [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "related_recipes":  [
+
+  ],
+  "all_seasons":  false,
+  "rating":  {
+    "count":  0,
+    "average":  null,
+    "rounded":  null
+  }
+}

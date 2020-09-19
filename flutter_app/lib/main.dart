@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/recipe.dart';
 import 'products.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: ProductsPage(),
+      // home: ProductsPage(),
+      home: RecipePage(),
     );
   }
 
