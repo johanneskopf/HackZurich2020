@@ -8,12 +8,17 @@ class GroceryItem {
   bool done = false;
   bool bought = false;
   Product product = null;
+  bool clickable = false;
 
   GroceryItem(this.name) {
   }
 
   void SetDone(bool isDone){
     done = isDone;
+  }
+
+  void SetClickable(bool state) {
+    clickable = state;
   }
 
   void BoughtProduct(Product p){
@@ -36,6 +41,9 @@ class GroceryList {
     other.items.forEach((element) {
       var newItem = GroceryItem(element.name);
       newItem.SetDone(element.done);
+      newItem.SetClickable(element.clickable);
+      if(element.bought)
+        newItem.BoughtProduct(element.product);
       items.add(newItem);});
   }
 
