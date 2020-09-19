@@ -1,4 +1,5 @@
 import 'dart:core';
+import 'models/recipe.dart';
 
 class GroceryItem {
   String name;
@@ -23,6 +24,7 @@ class GroceryList {
   void clone(GroceryList other){
     listName = other.listName;
     other.items.forEach((element) {
+      items.clear();
       var newItem = GroceryItem(element.name);
       newItem.SetDone(element.done);
       items.add(newItem);});
@@ -31,3 +33,5 @@ class GroceryList {
 }
 
 var GroceryLists = <GroceryList>[];
+
+var FavoriteRecipes = <Recipe>[];
