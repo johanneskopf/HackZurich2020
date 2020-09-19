@@ -1,8 +1,20 @@
 {
   "id":  "14465",
   "is_main_ingredient":  true,
-  "text":  "Birne",
-  "amount":  "@{is_approximate=False; quantity=1; quantity_up_to=; text=1; unit=}",
-  "availability":  null,
-  "cultivar":  "@{id=18796; name=Williams}"
+  "text":  "Birnen",
+  "amount":  {
+    "is_approximate":  false,
+    "quantity":  4,
+    "quantity_up_to":  null,
+    "text":  "4",
+    "unit":  ""
+  },
+  "availability":  {
+    "key":  "root.delikatessenshop.",
+    "name":  "aus dem DelikatessgeschÃ¤ft"
+  },
+  "cultivar":  {
+    "id":  "18796",
+    "name":  "Williams"
+  }
 }
