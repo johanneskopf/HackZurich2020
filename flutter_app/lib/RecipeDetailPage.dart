@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/models/index.dart';
 import 'package:flutter_app/recipe.dart';
 import 'Globals.dart';
 
@@ -21,6 +22,10 @@ class _DetailPageState extends State<DetailPage> {
   final double expandedHeight = 400;
   final double roundedContainerHeight = 50;
   int currentStep = 0;
+
+  String removeDecimalZeroFormat(double n) {
+    return n.toStringAsFixed(n.truncateToDouble() == n ? 0 : 1);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -83,28 +88,28 @@ class _DetailPageState extends State<DetailPage> {
                   children: <Widget>[
                     Expanded(
                         child: FlatButton(
-                          child: Text("Info"),
-                          onPressed: () {
-                            widget.currentPage = 0;
-                            setState(() {});
-                          },
-                        )),
+                      child: Text("Info"),
+                      onPressed: () {
+                        widget.currentPage = 0;
+                        setState(() {});
+                      },
+                    )),
                     Expanded(
                         child: FlatButton(
-                          child: Text("Incredients"),
-                          onPressed: () {
-                            widget.currentPage = 1;
-                            setState(() {});
-                          },
-                        )),
+                      child: Text("Incredients"),
+                      onPressed: () {
+                        widget.currentPage = 1;
+                        setState(() {});
+                      },
+                    )),
                     Expanded(
                         child: FlatButton(
-                          child: Text("Steps"),
-                          onPressed: () {
-                            widget.currentPage = 2;
-                            setState(() {});
-                          },
-                        ))
+                      child: Text("Steps"),
+                      onPressed: () {
+                        widget.currentPage = 2;
+                        setState(() {});
+                      },
+                    ))
                   ],
                 )),
           ),
@@ -138,11 +143,21 @@ class _DetailPageState extends State<DetailPage> {
       shrinkWrap: true,
       itemCount: widget.recipe.ingredients.length,
       itemBuilder: (context, index) {
+        RecipeIngredient rpi = widget.recipe.ingredients[index];
+        RecipeSizeIngredientBlockIngredient rpib =
+            widget.recipe.sizes[0].ingredientBlocks[0].ingredients[index];
+        RecipeIngredientAmount rpiba = rpib.amount;
+        String _quantity = "";
+        if (!rpiba.isApproximate && rpiba.quantity != 0) {
+          _quantity =
+              "${removeDecimalZeroFormat(rpiba.quantity)}${rpiba.unit == "g" ? "" : " "}${rpiba.unit} ";
+        }
         return Column(
           children: <Widget>[
             ListTile(
-              title: Text( //widget.recipe.sizes[0].ingredientBlocks[index].ingredients[]
-                  widget.recipe.ingredients[index].name.singular), // sizes[0] => for 2 Persons; sizes[1] => for 4 Persons; ... sizes[4] => 10 Persons
+              title: Text(
+                  _quantity + // sizes[0] => for 2 Persons; sizes[1] => for 4 Persons; ... sizes[4] => 10 Persons; ingredientBlocks[0].. as there is usually just one block?!
+                      rpi.name.singular),
             ),
             Divider(), //                           <-- Divider
           ],
@@ -156,7 +171,7 @@ class _DetailPageState extends State<DetailPage> {
         child: Stepper(
             physics: ClampingScrollPhysics(),
             controlsBuilder: (BuildContext context,
-                {VoidCallback onStepContinue, VoidCallback onStepCancel}) =>
+                    {VoidCallback onStepContinue, VoidCallback onStepCancel}) =>
                 Container(),
             onStepTapped: (index) {
               setState(() {
@@ -182,7 +197,7 @@ class _DetailPageState extends State<DetailPage> {
               var myStep = e.value;
               return Step(
                   title:
-                  Text(myStep.title == "" ? "Step ${idx}" : myStep.title),
+                      Text(myStep.title == "" ? "Step ${idx}" : myStep.title),
                   content: Text(myStep.description));
             }).toList()));
   }
@@ -202,8 +217,8 @@ class _DetailPageState extends State<DetailPage> {
               child: widget.currentPage == 0
                   ? getBasicText()
                   : widget.currentPage == 1
-                  ? getIngredients()
-                  : getSteps()),
+                      ? getIngredients()
+                      : getSteps()),
         ],
       ),
     );
