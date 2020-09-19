@@ -1,5 +1,6 @@
 import 'package:flutter_app/models/recipe_canonical_logo.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'tag.dart';
 import 'recipe_images.dart';
 
 part 'recipe.g.dart';
@@ -26,7 +27,7 @@ class Recipe {
   List<dynamic> steps;
   List<dynamic> ingredients;
   @JsonKey(name: 'ingredient_families') List<dynamic> ingredientFamilies;
-  List<dynamic> tags;
+  List<Tag> tags;
   List<dynamic> utilities;
   dynamic video;
   @JsonKey(name: 'scaling_hint') dynamic scalingHint;
