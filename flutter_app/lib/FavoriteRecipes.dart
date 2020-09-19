@@ -42,7 +42,7 @@ class _FavoriteRecipesWidgetState extends State<FavoriteRecipesPage> {
             );
             setState(() {});
           },
-          child: Icon(Icons.add)),
+          child: Icon(Icons.add, color: Colors.white,)),
     );
   }
 }

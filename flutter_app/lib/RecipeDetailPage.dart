@@ -67,15 +67,7 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 15,
-                    ),
-                    child: Icon(
-                      Icons.menu,
-                      color: Colors.white,
-                    ),
-                  )
+
                 ],
               ),
             ),
@@ -192,9 +184,7 @@ class _DetailPageState extends State<DetailPage> {
             break;
           }
         }
-        
         // print("block $blockindex ingredient: $ingredientIndex - is blocktile = $isBlockTile");
-
         if (isBlockTile) {
           var title = widget.recipe.sizes[0].ingredientBlocks[blockindex].title;
           return Text(

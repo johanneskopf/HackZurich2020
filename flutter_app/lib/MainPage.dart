@@ -109,7 +109,6 @@ class _MainPageWidgetState extends State<MainPage> {
 
 class MainButtonItem extends StatelessWidget {
   final Feature info;
-
   const MainButtonItem({this.info});
 
   @override
@@ -190,7 +189,7 @@ class Feature {
 final features = <Feature>[
   Feature(
       title: "Grocery Lists",
-      icon: Icons.local_grocery_store,
+      icon: Icons.assignment_turned_in,
       description: "View existing and create new grocery lists.",
       routeID: 0),
   Feature(
@@ -209,8 +208,8 @@ final features = <Feature>[
       description: "Find the closest store to buy all your groceries.",
       routeID: 3),
   Feature(
-      title: "Cart",
-      icon: Icons.access_time,
+      title: "Shopping Cart",
+      icon: Icons.shopping_cart,
       description: "View the scanned items in your shopping cart.",
       routeID: 4),
 ];
