@@ -42,6 +42,9 @@ class Recipe {
   @JsonKey(name: 'all_seasons') bool allSeasons;
   Rating rating;
 
+  bool isFavorite = false;
+
+
   factory Recipe.fromJson(Map<String,dynamic> json) => _$RecipeFromJson(json);
   Map<String, dynamic> toJson() => _$RecipeToJson(this);
 }
