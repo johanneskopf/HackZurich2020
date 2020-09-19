@@ -10,7 +10,7 @@ RecipeIngredientAmount _$RecipeIngredientAmountFromJson(
     Map<String, dynamic> json) {
   return RecipeIngredientAmount()
     ..isApproximate = json['is_approximate'] as bool
-    ..quantity = json['quantity'] as int
+    ..quantity = (json['quantity'] as num)?.toDouble()
     ..quantityUpTo = json['quantity_up_to']
     ..text = json['text'] as String
     ..unit = json['unit'] as String;

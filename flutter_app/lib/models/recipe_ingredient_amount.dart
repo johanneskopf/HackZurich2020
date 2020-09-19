@@ -8,7 +8,7 @@ class RecipeIngredientAmount {
       RecipeIngredientAmount();
 
   @JsonKey(name: 'is_approximate') bool isApproximate;
-  int quantity;
+  double quantity;
   @JsonKey(name: 'quantity_up_to') dynamic quantityUpTo;
   String text;
   String unit;
