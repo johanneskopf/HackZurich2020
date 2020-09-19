@@ -2,13 +2,7 @@
   "id":  "14465",
   "is_main_ingredient":  true,
   "text":  "Birnen",
-  "amount":  {
-    "is_approximate":  false,
-    "quantity":  4,
-    "quantity_up_to":  null,
-    "text":  "4",
-    "unit":  ""
-  },
+  "amount":  "$recipe_ingredient_amount",
   "availability":  {
     "key":  "root.delikatessenshop.",
     "name":  "aus dem DelikatessgeschÃ¤ft"
