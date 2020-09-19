@@ -1,0 +1,15 @@
+{
+  "id":  14778,
+  "synonyms":  [
+    "Limonensaft"
+  ],
+  "name":  {
+    "singular":  "Zitronensaft",
+    "plural":  "Zitronensaft"
+  },
+  "modified":  "2019-10-04T14:27:18Z",
+  "family_ids":  [
+    14056118,
+    14056119
+  ]
+}

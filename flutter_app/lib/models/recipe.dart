@@ -1,5 +1,7 @@
 import 'package:flutter_app/models/recipe_canonical_logo.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'recipe_step.dart';
+import 'recipe_ingredient.dart';
 import 'tag.dart';
 import 'recipe_images.dart';
 
@@ -24,8 +26,8 @@ class Recipe {
   @JsonKey(name: 'has_video') bool hasVideo;
   List<dynamic> hints;
   Nutrients nutrients;
-  List<dynamic> steps;
-  List<dynamic> ingredients;
+  List<RecipeStep> steps;
+  List<RecipeIngredient> ingredients;
   @JsonKey(name: 'ingredient_families') List<dynamic> ingredientFamilies;
   List<Tag> tags;
   List<dynamic> utilities;

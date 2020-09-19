@@ -49,7 +49,10 @@ class _GroceryListWidgetState extends State<GroceryListPage> {
     } else {
       workingList.listName = nameController.text;
     }
+    workingList.items.forEach((element) => element.SetClickable(true));
+
     GroceryLists[groceryListId].clone(workingList);
+
     Navigator.pop(context);
   }
 
@@ -193,7 +196,9 @@ class GroceryItemWidget extends StatelessWidget {
     return ListTile(
         title: FlatButton(
             onPressed: () {
-              print("clicked item");
+              print("clicked item - clickable: ${parent.workingList.items[itemIdx].clickable}");
+              if(!parent.workingList.items[itemIdx].clickable)
+                return;
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ProductSearchPage(listIdx, itemIdx)),

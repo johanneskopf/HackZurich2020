@@ -25,8 +25,15 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
     ..nutrients = json['nutrients'] == null
         ? null
         : Nutrients.fromJson(json['nutrients'] as Map<String, dynamic>)
-    ..steps = json['steps'] as List
-    ..ingredients = json['ingredients'] as List
+    ..steps = (json['steps'] as List)
+        ?.map((e) =>
+            e == null ? null : RecipeStep.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..ingredients = (json['ingredients'] as List)
+        ?.map((e) => e == null
+            ? null
+            : RecipeIngredient.fromJson(e as Map<String, dynamic>))
+        ?.toList()
     ..ingredientFamilies = json['ingredient_families'] as List
     ..tags = (json['tags'] as List)
         ?.map((e) => e == null ? null : Tag.fromJson(e as Map<String, dynamic>))
