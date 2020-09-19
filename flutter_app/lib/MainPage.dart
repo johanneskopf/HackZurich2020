@@ -33,7 +33,7 @@ class _MainPageWidgetState extends State<MainPage> {
   Widget build(BuildContext context) {
     if (_isAnimated) {
       _animatedHeight = MediaQuery.of(context).size.height;
-      _animatedColor = Theme.of(context).accentColor;
+      _animatedColor = Colors.white;
     } else {
       _animatedHeight = MediaQuery.of(context).size.height * 0.2;
       _animatedColor = Theme.of(context).primaryColor;
