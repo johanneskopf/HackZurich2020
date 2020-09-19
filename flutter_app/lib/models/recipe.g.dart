@@ -28,7 +28,9 @@ Recipe _$RecipeFromJson(Map<String, dynamic> json) {
     ..steps = json['steps'] as List
     ..ingredients = json['ingredients'] as List
     ..ingredientFamilies = json['ingredient_families'] as List
-    ..tags = json['tags'] as List
+    ..tags = (json['tags'] as List)
+        ?.map((e) => e == null ? null : Tag.fromJson(e as Map<String, dynamic>))
+        ?.toList()
     ..utilities = json['utilities'] as List
     ..video = json['video']
     ..scalingHint = json['scaling_hint']
