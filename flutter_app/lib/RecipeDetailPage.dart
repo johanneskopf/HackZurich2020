@@ -43,7 +43,10 @@ class _DetailPageState extends State<DetailPage> {
           ),
           Padding(
             padding: EdgeInsets.only(
-              top: MediaQuery.of(context).padding.top,
+              top: MediaQuery
+                  .of(context)
+                  .padding
+                  .top,
             ),
             child: SizedBox(
               height: kToolbarHeight,
@@ -81,35 +84,40 @@ class _DetailPageState extends State<DetailPage> {
             bottom: 0,
             left: 0,
             child: Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
                 height: 50,
-                color: Theme.of(context).accentColor,
+                color: Theme
+                    .of(context)
+                    .accentColor,
                 child: Row(
                   children: <Widget>[
                     Expanded(
                         child: FlatButton(
-                      child: Text("Info"),
-                      onPressed: () {
-                        widget.currentPage = 0;
-                        setState(() {});
-                      },
-                    )),
+                          child: Text("Info"),
+                          onPressed: () {
+                            widget.currentPage = 0;
+                            setState(() {});
+                          },
+                        )),
                     Expanded(
                         child: FlatButton(
-                      child: Text("Incredients"),
-                      onPressed: () {
-                        widget.currentPage = 1;
-                        setState(() {});
-                      },
-                    )),
+                          child: Text("Incredients"),
+                          onPressed: () {
+                            widget.currentPage = 1;
+                            setState(() {});
+                          },
+                        )),
                     Expanded(
                         child: FlatButton(
-                      child: Text("Steps"),
-                      onPressed: () {
-                        widget.currentPage = 2;
-                        setState(() {});
-                      },
-                    ))
+                          child: Text("Steps"),
+                          onPressed: () {
+                            widget.currentPage = 2;
+                            setState(() {});
+                          },
+                        ))
                   ],
                 )),
           ),
@@ -135,122 +143,167 @@ class _DetailPageState extends State<DetailPage> {
   }
 
   Widget getIngredients() {
-    print(widget.recipe.ingredients[0].modified.toString());
-    print(widget.recipe.ingredients[0].familyIds.toString());
+    print("len:");
+    widget.recipe.sizes[0].ingredientBlocks.forEach((element) {
+      print(element.title.toString());
+    });
+    print("-----------------");
+
+    print(widget.recipe.sizes[0].ingredientBlocks[0].ingredients.length);
+    widget.recipe.sizes[0].ingredientBlocks[0].ingredients.forEach((element) {
+      print(element.amount.text + " " + element.text);
+    });
+    print("TTTTT!)");
+    if (widget.recipe.sizes[0].ingredientBlocks.length > 1) {
+      widget.recipe.sizes[0].ingredientBlocks[1].ingredients.forEach((element) {
+        print(element.amount.text + " " + element.text);
+      });
+    }
+    var totalSize = 0;
+    widget.recipe.sizes[0].ingredientBlocks.forEach((element) {
+      totalSize += 1 + element.ingredients.length;
+    });
+
+    print("totalSize $totalSize");
 
     return ListView.builder(
       physics: ClampingScrollPhysics(),
       shrinkWrap: true,
-      itemCount: widget.recipe.ingredients.length,
+      itemCount: totalSize,
+      //widget.recipe.sizes[0].ingredientBlocks[0].ingredients.length,
       itemBuilder: (context, index) {
-        RecipeIngredient rpi = widget.recipe.ingredients[index];
-        RecipeSizeIngredientBlockIngredient rpib =
-            widget.recipe.sizes[0].ingredientBlocks[0].ingredients[index];
-        RecipeIngredientAmount rpiba = rpib.amount;
-        String _quantity = "";
-        if (!rpiba.isApproximate && rpiba.quantity != 0) {
-          _quantity =
-              "${removeDecimalZeroFormat(rpiba.quantity)}${rpiba.unit == "g" ? "" : " "}${rpiba.unit} ";
+        var blockindex = 0;
+        var ingredientIndex = 0;
+        var isBlockTile = false;
+
+        while (index >= 0) {
+          if (index == 0) {
+            isBlockTile = true;
+            break;
+          }
+          if (index >=
+              widget.recipe.sizes[0].ingredientBlocks[blockindex].ingredients
+                  .length + 1) {
+            index -= widget.recipe.sizes[0].ingredientBlocks[blockindex]
+                .ingredients.length + 1;
+            blockindex++;
+          } else {
+            ingredientIndex = index - 1; //as 0 element is the block title
+            break;
+          }
         }
-        return Column(
-          children: <Widget>[
-            ListTile(
-              title: Text(
-                  _quantity + // sizes[0] => for 2 Persons; sizes[1] => for 4 Persons; ... sizes[4] => 10 Persons; ingredientBlocks[0].. as there is usually just one block?!
-                      rpi.name.singular),
-            ),
-            Divider(), //                           <-- Divider
-          ],
+        
+        // print("block $blockindex ingredient: $ingredientIndex - is blocktile = $isBlockTile");
+
+        if (isBlockTile) {
+          var title = widget.recipe.sizes[0].ingredientBlocks[blockindex].title;
+          return Text(
+              widget.recipe.sizes[0].ingredientBlocks[blockindex].title != null
+                  ? title.toString()
+                  : "Basic");
+        }
+
+        RecipeSizeIngredientBlockIngredient rpib = widget.recipe.sizes[0]
+            .ingredientBlocks[blockindex].ingredients[ingredientIndex];
+        RecipeIngredientAmount rpiba = rpib.amount;
+        return ListTile(
+          title: Text(rpiba.text + " " + rpib.text),
         );
       },
     );
   }
 
-  Widget getSteps() {
-    return Container(
-        child: Stepper(
-            physics: ClampingScrollPhysics(),
-            controlsBuilder: (BuildContext context,
-                    {VoidCallback onStepContinue, VoidCallback onStepCancel}) =>
-                Container(),
-            onStepTapped: (index) {
-              setState(() {
-                currentStep = index;
-              });
-            },
-            currentStep: currentStep,
-            onStepContinue: () {
-              if (currentStep >= 4)
-                return; //widget.recipe.steps.length) return;
-              setState(() {
-                currentStep += 1;
-              });
-            },
-            onStepCancel: () {
-              if (currentStep <= 0) return;
-              setState(() {
-                currentStep -= 1;
-              });
-            },
-            steps: widget.recipe.steps.asMap().entries.map<Step>((e) {
-              var idx = e.key + 1;
-              var myStep = e.value;
-              return Step(
-                  title:
-                      Text(myStep.title == "" ? "Step ${idx}" : myStep.title),
-                  content: Text(myStep.description));
-            }).toList()));
-  }
 
-  Widget buildDetail() {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          buildUserInfo(),
-          Padding(
-              padding: EdgeInsets.symmetric(
-                vertical: 15,
-                horizontal: 15,
-              ),
-              child: widget.currentPage == 0
-                  ? getBasicText()
-                  : widget.currentPage == 1
-                      ? getIngredients()
-                      : getSteps()),
-        ],
-      ),
-    );
-  }
-
-  Widget buildUserInfo() {
-    return ListTile(
-      leading: CircleAvatar(
-        backgroundColor: Colors.blue,
-        radius: 24,
-        backgroundImage: NetworkImage(widget.recipe.images.first.ratios[0].stack
-            .replaceFirst("{stack}", "medium")),
-      ),
-      title: Text(widget.recipe.title),
-      subtitle: Text("Calories: ${widget.recipe.nutrients.calories} cals | Duration: ${widget.recipe.durationTotalInMinutes} min"),
-      trailing: GestureDetector(
-        child: Icon(widget.recipe.isFavorite? Icons.favorite : Icons.favorite_border),
-        onTap: () {
-          if(widget.recipe.isFavorite){
-            FavoriteRecipes.remove(widget.recipe);
-          }
-          else {
-            FavoriteRecipes.add(widget.recipe);
-          }
-          widget.recipe.isFavorite = !widget.recipe.isFavorite;
-
-          setState(() {});
-        },
-      ),
-    );
-  }
+Widget getSteps() {
+  return Container(
+      child: Stepper(
+          physics: ClampingScrollPhysics(),
+          controlsBuilder: (BuildContext context,
+              {VoidCallback onStepContinue, VoidCallback onStepCancel}) =>
+              Container(),
+          onStepTapped: (index) {
+            setState(() {
+              currentStep = index;
+            });
+          },
+          currentStep: currentStep,
+          onStepContinue: () {
+            if (currentStep >= 4)
+              return; //widget.recipe.steps.length) return;
+            setState(() {
+              currentStep += 1;
+            });
+          },
+          onStepCancel: () {
+            if (currentStep <= 0) return;
+            setState(() {
+              currentStep -= 1;
+            });
+          },
+          steps: widget.recipe.steps
+              .asMap()
+              .entries
+              .map<Step>((e) {
+            var idx = e.key + 1;
+            var myStep = e.value;
+            return Step(
+                title:
+                Text(myStep.title == "" ? "Step ${idx}" : myStep.title),
+                content: Text(myStep.description));
+          }).toList()));
 }
+
+Widget buildDetail() {
+  return Container(
+    color: Colors.white,
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        buildUserInfo(),
+        Padding(
+            padding: EdgeInsets.symmetric(
+              vertical: 15,
+              horizontal: 15,
+            ),
+            child: widget.currentPage == 0
+                ? getBasicText()
+                : widget.currentPage == 1
+                ? getIngredients()
+                : getSteps()),
+      ],
+    ),
+  );
+}
+
+Widget buildUserInfo() {
+  return ListTile(
+    leading: CircleAvatar(
+      backgroundColor: Colors.blue,
+      radius: 24,
+      backgroundImage: NetworkImage(widget.recipe.images.first.ratios[0].stack
+          .replaceFirst("{stack}", "medium")),
+    ),
+    title: Text(widget.recipe.title),
+    subtitle: Text(
+        "Calories: ${widget.recipe.nutrients.calories} cals | Duration: ${widget
+            .recipe.durationTotalInMinutes} min | ${widget.recipe.sizes[0]
+            .textFull}"),
+    trailing: GestureDetector(
+      child: Icon(
+          widget.recipe.isFavorite ? Icons.favorite : Icons.favorite_border),
+      onTap: () {
+        if (widget.recipe.isFavorite) {
+          FavoriteRecipes.remove(widget.recipe);
+        } else {
+          FavoriteRecipes.add(widget.recipe);
+        }
+        widget.recipe.isFavorite = !widget.recipe.isFavorite;
+
+        setState(() {});
+      },
+    ),
+  );
+}}
 
 class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
   final double expandedHeight;
@@ -262,8 +315,8 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
       this.recipe, this.pageIdx);
 
   @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(BuildContext context, double shrinkOffset,
+      bool overlapsContent) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -280,14 +333,20 @@ class DetailSliverDelegate extends SliverPersistentHeaderDelegate {
                 child: Image.network(
                   recipe.images.first.ratios[4].stack
                       .replaceFirst("{stack}", "large"),
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
                   fit: BoxFit.cover,
                 )),
             Positioned(
               top: expandedHeight - roundedContainerHeight - shrinkOffset,
               left: 0,
               child: Container(
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width,
                 height: roundedContainerHeight,
                 decoration: BoxDecoration(
                   color: Colors.white,
