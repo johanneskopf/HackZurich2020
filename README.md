@@ -1,4 +1,4 @@
-![logo](https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/images/logo.png)
+<img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/images/logo.png" />
 
 ## Inspiration
 Google Keep, Tinder, Chefkoch
@@ -10,7 +10,13 @@ We used Google Flutter to create this project. This way, we are not constrained 
 Due to time constraints and as we are just 2 programmers we were not able to implement all the ideas we had, but instead just the most important ones.
 ## Accomplishments that we're proud of
 That we created a fully functional app using live API data that is actually fetched from the Migros server. Also, we currently have a lot of fun finding new recipes to cook ourselves using the Recipe-Tinder functionality. Additionally, we are proud that we have come this far with the implementation of the app given our (wo)man power.
-## What we learned
+## What we have learned
 How to use the Elasticsearch API inside Flutter and we also discovered some new Flutter widgets.
 ## What's next for Foodster
 Publishing it as a website and adding more features, like using more of the offered data (e.g. showing product regionality - 30% of the products in your cart are from Swiss, 10% from Austria, ...; a barcode scanner to scan products, ...).
+
+## Screenshots
+<img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/basic.png"/>
+<img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/products.png"/>
+<img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/recipetinder.png"/>
+<img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/recipe.png"/>
