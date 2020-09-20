@@ -52,7 +52,7 @@ class _MainPageWidgetState extends State<MainPage> {
       // ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: 24),
+          // margin: EdgeInsets.only(top: 24),
           child: Column(mainAxisSize: MainAxisSize.max, children: [
             Center(
               child: AnimatedContainer(
