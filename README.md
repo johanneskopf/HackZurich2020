@@ -1,5 +1,6 @@
 <img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/images/logo.png" />
 
+# Hack Zurich 2020
 ## Inspiration
 Google Keep, Tinder, Chefkoch
 ## What it does
@@ -20,3 +21,9 @@ Publishing it as a website and adding more features, like using more of the offe
 <img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/products.png"/>
 <img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/recipetinder.png"/>
 <img src="https://github.com/johanneskopf/HackZurich2020/blob/master/flutter_app/Screenshots/recipe.png"/>
+
+
+
+
+
+
